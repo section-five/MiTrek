@@ -1,0 +1,76 @@
+//Creative Tabs
+itemGroup.arctic=Arctic Items
+itemGroup.food=World Plus Food
+
+
+//Blocks
+tile.red_ice.name=Red Ice
+tile.black_ice.name=Black Ice
+tile.brown_ice.name=Brown Ice
+tile.cyan_ice.name=Cyan Ice
+tile.gray_ice.name=Gray Ice
+tile.light_blue_ice.name=Light Blue Ice
+tile.light_gray_ice.name=Light Gray Ice
+tile.lime_ice.name=Lime Ice
+tile.magenta_ice.name=Magenta Ice
+tile.pink_ice.name=Pink Ice
+tile.orange_ice.name=Orange Ice
+tile.purple_ice.name=Purple Ice
+tile.white_ice.name=White Ice
+tile.yellow_ice.name=Yellow Ice
+tile.blue_ice.name=Blue Ice
+tile.green_ice.name=Green Ice
+tile.chiseled_snowy_bricks.name=Chiseled Snowy Bricks
+tile.cracked_snowy_bricks.name=Cracked Snowy Bricks
+tile.snowy_bricks.name=Snowy Bricks
+tile.mossy_snowy_bricks.name=Mossy Snowy Bricks
+tile.frozen_lamp.name=Frozen Lantern
+tile.snowy_sand.name=Snowy Sand
+tile.icy_snow.name=Icy Snow
+tile.icicle_thin.name=Thin Icicle
+tile.icicle_small.name=Small Icicle
+tile.icicle_big.name=Big Icicle
+
+//Items
+item.stronger_ice_ball.name=Stronger Ice Ball
+item.weaker_ice_ball.name=Weaker Ice Ball
+item.hammer.name=Hammer
+
+//Foods
+item.raw_polar_bear.name=Raw Polar Bear
+item.cooked_polar_bear.name= Cooked Polar Bear
+item.raw_penguin.name=Raw Penguin
+item.cooked_penguin.name=Cooked Penguin
+item.raw_seal.name=Raw Seal
+item.cooked_seal.name=Cooked Seal
+item.berry.name=Berry
+
+//Sounds
+sounds.penguin_hurt=Penguin Hurt
+sounds.penguin_ambient=Penguin
+sounds.penguin_death=Penguin Death
+
+//Entity
+entity.penguin.name=Penguin
+entity.seal.name=Seal
+entity.walrus.name=Walrus
+entity.arctic_fox.name=Arctic Fox
+entity.snake.name=Snake
+entity.squirrel.name=Squirrel
+entity.worm.name=Worm
+
+//Config
+category.worldplus.spawn=Spawn
+category.worldplus.world=World
+category.worldplus.spawn.penguin=Penguin
+category.worldplus.spawn.seal=Seal
+category.worldplus.spawn.walrus=Walrus
+category.worldplus.spawn.snake=Snake
+category.worldplus.spawn.arcticfox=Arctic Fox
+config.worldplus.spawn.max_spawn=Maximum Spawn Rate
+config.worldplus.spawn.spawn_probability=Spawn Probability
+config.worldplus.spawn.min_spawn=Minimum Spawn Rate
+config.worldplus.spawn.spawntype=Spawn Type
+config.worldplus.spawn.allowed_spawn_biomes_arctic=Allowed Spawn Biomes Arctic
+config.worldplus.spawn.allowed_spawn_biomes_hostile=Allowed Spawn Biomes Hostile
+config.worldplus.world.gen_snowy_plains=Generate Biome Snowy_Plains
