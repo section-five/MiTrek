@@ -1,9 +1,9 @@
 package com.ukminecrafted.mitrek.common.blocks;
 
+import com.ukminecrafted.mitrek.Main;
 import com.ukminecrafted.mitrek.init.ModBlocks;
 import com.ukminecrafted.mitrek.init.ModItems;
 import com.ukminecrafted.mitrek.util.IHasModel;
-import com.ukminecrafted.mitrek.Main;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;

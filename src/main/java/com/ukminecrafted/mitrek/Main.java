@@ -34,7 +34,7 @@ public class Main
         }
     };
 
-    public static CreativeTabs items = new CreativeTabs("assets/mitrek/models/item")
+    public static CreativeTabs items = new CreativeTabs("items")
     {
         @Override
         public ItemStack createIcon() {

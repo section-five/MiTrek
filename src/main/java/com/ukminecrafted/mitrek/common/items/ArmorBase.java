@@ -1,8 +1,8 @@
 package com.ukminecrafted.mitrek.common.items;
 
 import com.ukminecrafted.mitrek.Main;
-import com.ukminecrafted.mitrek.util.IHasModel;
 import com.ukminecrafted.mitrek.init.ModItems;
+import com.ukminecrafted.mitrek.util.IHasModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;

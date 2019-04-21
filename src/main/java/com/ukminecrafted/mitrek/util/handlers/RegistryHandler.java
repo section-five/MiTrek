@@ -1,8 +1,8 @@
 package com.ukminecrafted.mitrek.util.handlers;
 
-import com.ukminecrafted.mitrek.util.IHasModel;
 import com.ukminecrafted.mitrek.init.ModBlocks;
 import com.ukminecrafted.mitrek.init.ModItems;
+import com.ukminecrafted.mitrek.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
