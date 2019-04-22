@@ -4,7 +4,7 @@
   "name": "MiTrek",
   "description": "Adds gear from the Science Fiction TV Show Star Trek",
   "version": "${version}",
-  "mcversion": "1.12.2",
+  "mcversion": "${mcversion}",
   "url": "https://discord.gg/R6GQ4PU",
   "updateUrl": "",
   "authorList": ["§6UKMinecrafted"],
