@@ -1,8 +1,8 @@
 {
 	"credit": "UKMinecrafted 2019",
 	"textures": {
-		"0": "blocks/bat'leth",
-		"particle": "blocks/bat'leth"
+		"0": "MiTrek:items/batleth",
+		"particle": "MiTrek:items/batleth"
 	},
 	"elements": [
 		{
