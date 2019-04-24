@@ -15,6 +15,7 @@ public class ModMaterials {
 //clothing
     public static final ItemArmor.ArmorMaterial VOY_COMMAND_UNIFORM = EnumHelper.addArmorMaterial("voy_command_uniform", Main.MODID + ":voy_command", 15, new int[] {3,6,8,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
     public static final ItemArmor.ArmorMaterial VOY_ENGINEERING_UNIFORM = EnumHelper.addArmorMaterial("voy_engineering_uniform", Main.MODID + ":voy_engineering", 15, new int[] {3,6,8,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
+    public static final ItemArmor.ArmorMaterial VOY_MEDICAL_UNIFORM = EnumHelper.addArmorMaterial("voy_medical_uniform", Main.MODID + ":voy_medical", 15, new int[] {3,6,8,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
 //tools
     public static final ItemTool.ToolMaterial BATLETH = EnumHelper.addToolMaterial("batleth", 0, 1024, 1, 5, 1);
 }
