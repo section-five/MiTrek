@@ -2,6 +2,7 @@ package com.ukminecrafted.mitrek.init;
 
 import com.ukminecrafted.mitrek.common.items.ArmorBase;
 import com.ukminecrafted.mitrek.common.items.ItemBase;
+import com.ukminecrafted.mitrek.common.items.ItemCombadge;
 import com.ukminecrafted.mitrek.common.items.WeaponBase;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -15,7 +16,7 @@ public class ModItems {
     public static final List<Item> ITEMS = new ArrayList<Item>();
 
     //item
-    public static final Item COMBADGE = new ItemBase("combadge");
+    public static final Item COMBADGE = new ItemCombadge("combadge");
     public static final Item BATLETH = new WeaponBase("batleth", ModMaterials.BATLETH);
 
     //Voyager Command

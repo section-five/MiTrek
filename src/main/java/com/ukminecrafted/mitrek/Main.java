@@ -29,7 +29,7 @@ public class Main
     public static CreativeTabs uniforms = new CreativeTabs("uniforms")
     {
         @Override
-        public ItemStack createIcon() {
+        public ItemStack getTabIconItem() {
             return new ItemStack(ModItems.COMBADGE);
         }
     };
@@ -37,7 +37,7 @@ public class Main
     public static CreativeTabs items = new CreativeTabs("items")
     {
         @Override
-        public ItemStack createIcon() {
+        public ItemStack getTabIconItem() {
             return new ItemStack(ModItems.COMBADGE);
         }
     };

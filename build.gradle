@@ -72,7 +72,7 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-    //deobfCompile "com.github.azanor:Baubles:${baubles_version}"
+    deobfCompile "com.github.azanor:Baubles:${baubles_version}"
     //compileOnly "mezz.jei:jei_${mc_version}:${jei_version}:api"
 }
 
