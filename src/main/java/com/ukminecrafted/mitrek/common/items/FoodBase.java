@@ -11,7 +11,7 @@ public class FoodBase extends ItemFood implements IHasModel
     public FoodBase(String name, int amount, float saturation, boolean isAnimalFood)
     {
         super(amount, saturation, isAnimalFood);
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
         setCreativeTab(Main.items);
 

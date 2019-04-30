@@ -10,7 +10,7 @@ import net.minecraftforge.common.capabilities.CapabilityInject;
 
 public class ItemCombadge extends Item implements IHasModel {
     public ItemCombadge(String name) {
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
         setCreativeTab(Main.items);
 

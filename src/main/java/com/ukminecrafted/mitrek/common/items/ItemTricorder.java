@@ -14,7 +14,7 @@ import net.minecraftforge.client.event.MouseEvent;
 public class ItemTricorder extends Item implements IHasModel {
 
     public ItemTricorder(String name) {
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
         setCreativeTab(Main.items);
 

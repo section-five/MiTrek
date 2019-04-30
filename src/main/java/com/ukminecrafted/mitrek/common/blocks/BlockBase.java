@@ -12,7 +12,7 @@ import net.minecraft.item.ItemBlock;
 public class BlockBase extends Block implements IHasModel {
     public BlockBase(String name, Material material) {
         super(material);
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
         setCreativeTab(Main.items);
         ModBlocks.BLOCKS.add(this);

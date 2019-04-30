@@ -10,7 +10,7 @@ public class WeaponBase extends ItemSword implements IHasModel
 {
         public WeaponBase(String name,ToolMaterial material) {
             super(material);
-        setUnlocalizedName(name);
+        setTranslationKey(name);
         setRegistryName(name);
         setCreativeTab(Main.items);
         ModItems.ITEMS.add(this);
