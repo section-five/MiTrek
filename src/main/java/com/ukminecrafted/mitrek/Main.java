@@ -1,5 +1,6 @@
 package com.ukminecrafted.mitrek;
 
+import com.ukminecrafted.mitrek.init.ModDimensions;
 import com.ukminecrafted.mitrek.init.ModItems;
 import com.ukminecrafted.mitrek.proxy.CommonProxy;
 import com.ukminecrafted.mitrek.util.Reference;
@@ -29,7 +30,7 @@ public class Main
     public static CreativeTabs uniforms = new CreativeTabs("uniforms")
     {
         @Override
-        public ItemStack getTabIconItem() {
+        public ItemStack createIcon() {
             return new ItemStack(ModItems.COMBADGE);
         }
     };
@@ -37,7 +38,7 @@ public class Main
     public static CreativeTabs items = new CreativeTabs("items")
     {
         @Override
-        public ItemStack getTabIconItem() {
+        public ItemStack createIcon() {
             return new ItemStack(ModItems.COMBADGE);
         }
     };
@@ -48,6 +49,7 @@ public class Main
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
+        ModDimensions.Register();
     }
 
     @EventHandler
