@@ -1,14 +1,18 @@
 package com.ukminecrafted.mitrek.util.handlers;
 
+import com.ukminecrafted.mitrek.Mitrek;
 import com.ukminecrafted.mitrek.init.ModBlocks;
 import com.ukminecrafted.mitrek.init.ModItems;
 import com.ukminecrafted.mitrek.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @EventBusSubscriber
 public class RegistryHandler {
@@ -36,4 +40,9 @@ public class RegistryHandler {
             }
         }
     }
+
+    public static void registerTileEntity(Class<? extends TileEntity> clazz, String name) {
+        GameRegistry.registerTileEntity(clazz, new ResourceLocation(Mitrek.MODID, name));
+    }
+
 }

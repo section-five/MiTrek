@@ -1,6 +1,6 @@
 package com.ukminecrafted.mitrek.common.blocks;
 
-import com.ukminecrafted.mitrek.Main;
+import com.ukminecrafted.mitrek.Mitrek;
 import com.ukminecrafted.mitrek.init.ModBlocks;
 import com.ukminecrafted.mitrek.init.ModItems;
 import com.ukminecrafted.mitrek.util.IHasModel;
@@ -14,14 +14,14 @@ public class BlockBase extends Block implements IHasModel {
         super(material);
         setTranslationKey(name);
         setRegistryName(name);
-        setCreativeTab(Main.items);
+
         ModBlocks.BLOCKS.add(this);
         ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
     }
 
     @Override
     public void registerModels() {
-        Main.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
+        Mitrek.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
     }
 
 }
