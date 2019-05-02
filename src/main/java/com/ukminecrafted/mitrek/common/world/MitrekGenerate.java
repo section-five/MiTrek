@@ -24,14 +24,12 @@ public class MitrekGenerate implements IChunkGenerator {
         world.setSeaLevel(64);
     }
 
-
     public MitrekGenerate(World world, long seed) {
         super();
         this.world = world;
         this.rand = new Random(seed);
         world.setSeaLevel(64);
     }
-
 
     @Override
     public Chunk generateChunk(int x, int z) {
@@ -75,5 +73,4 @@ public class MitrekGenerate implements IChunkGenerator {
     public boolean isInsideStructure(World worldIn, String structureName, BlockPos pos) {
         return false;
     }
-
 }

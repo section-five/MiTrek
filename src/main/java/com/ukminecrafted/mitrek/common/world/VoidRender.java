@@ -9,5 +9,4 @@ public class VoidRender extends IRenderHandler {
     @Override
     public void render(float partialTicks, WorldClient world, Minecraft mc) {
     }
-
 }
