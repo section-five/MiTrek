@@ -1,5 +1,7 @@
 package com.ukminecrafted.mitrek;
 
+import com.ukminecrafted.mitrek.common.tileentity.TileEntityShip;
+import com.ukminecrafted.mitrek.common.tileentity.TileEntityShipExterior;
 import com.ukminecrafted.mitrek.init.ModDimensions;
 import com.ukminecrafted.mitrek.init.ModItems;
 import com.ukminecrafted.mitrek.proxy.CommonProxy;
@@ -14,8 +16,10 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = Main.MODID, name = Main.NAME, version = Main.VERSION)
-public class Main
+import static com.ukminecrafted.mitrek.util.handlers.RegistryHandler.registerTileEntity;
+
+@Mod(modid = Mitrek.MODID, name = Mitrek.NAME, version = Mitrek.VERSION)
+public class Mitrek
 {
     public static final String MODID = "mitrek";
     public static final String NAME = "MiTrek";
@@ -50,12 +54,12 @@ public class Main
     {
         logger = event.getModLog();
         ModDimensions.Register();
+        registerTileEntity(TileEntityShip.class, "TileShip");
+        registerTileEntity(TileEntityShipExterior.class, "TileShipExterior");
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-        // some example code
-        logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 }
