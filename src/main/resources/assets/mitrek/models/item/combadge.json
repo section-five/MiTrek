@@ -1,8 +1,8 @@
 {
 	"credit": "UKMinecrafted 2019",
 	"textures": {
-		"0": "MiTrek:items/combadge",
-		"particle": "MiTrek:items/combadge"
+		"0": "mitrek:items/combadge",
+		"particle": "mitrek:items/combadge"
 	},
 	"elements": [
 		{
