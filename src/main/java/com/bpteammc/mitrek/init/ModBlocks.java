@@ -16,6 +16,7 @@ public class ModBlocks {
     public static final Block SHIP_EXTERIOR = new BlockShipExterior("ship_exterior", Material.IRON);
     public static final Block SHIP_CONSOLE = new BlockConsole("ship_console", Material.IRON);
     public static final Block STARSHIP_HULL = new BlockBase("starship_hull", Material.ROCK);
+
     public static final Block A_BLOCK = new BlockBase("a_block", Material.ROCK);
     public static final Block B_BLOCK = new BlockBase("b_block", Material.ROCK);
     public static final Block C_BLOCK = new BlockBase("c_block", Material.ROCK);

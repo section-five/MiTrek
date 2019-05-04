@@ -34,7 +34,7 @@ public class Mitrek
     {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModItems.COMBADGE);
+            return new ItemStack(ModItems.TNG_COMBADGE);
         }
     };
 
@@ -42,7 +42,7 @@ public class Mitrek
     {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModItems.COMBADGE);
+            return new ItemStack(ModItems.TNG_COMBADGE);
         }
     };
 

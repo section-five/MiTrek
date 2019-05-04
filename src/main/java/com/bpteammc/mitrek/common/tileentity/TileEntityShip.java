@@ -12,6 +12,7 @@ public class TileEntityShip extends TileEntity implements ITickable {
     private BlockPos hullposition = BlockPos.ORIGIN;
     private BlockPos destination = BlockPos.ORIGIN;
     private BlockPos interiorposition = BlockPos.ORIGIN;
+
     private int dimension = 0;
     private int destinationdim = 0;
 
