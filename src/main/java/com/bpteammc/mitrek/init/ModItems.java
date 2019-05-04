@@ -1,10 +1,6 @@
 package com.bpteammc.mitrek.init;
 
-import com.bpteammc.mitrek.common.items.ArmorBase;
-import com.bpteammc.mitrek.common.items.ItemCombadge;
-import com.bpteammc.mitrek.common.items.ItemTricorder;
-import com.bpteammc.mitrek.common.items.WeaponBase;
-import com.ukminecrafted.mitrek.common.items.*;
+import com.bpteammc.mitrek.common.items.*;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 
@@ -15,7 +11,8 @@ public class ModItems {
     public static final List<Item> ITEMS = new ArrayList<Item>();
 
     //item
-    public static final Item COMBADGE = new ItemCombadge("combadge");
+    public static final Item TNG_COMBADGE = new ItemCombadge("tng_combadge");
+    public static final Item VOY_COMBADGE = new ItemCombadge("voy_combadge");
     public static final Item BATLETH = new WeaponBase("batleth", ModMaterials.BATLETH);
     public static final Item TRICORDER = new ItemTricorder("tricorder");
 

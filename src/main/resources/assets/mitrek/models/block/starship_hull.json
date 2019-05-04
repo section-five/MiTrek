@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "MiTrek:blocks/starship_hull"
+  }
+}
