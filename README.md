@@ -1,6 +1,6 @@
 # MiTrek ![](https://img.shields.io/badge/Creator-UKMinecrafted-orange.svg) ![](https://img.shields.io/badge/Minecraft-1.12.2-blue.svg) ![](https://img.shields.io/badge/Owner-BPTeam-blue.svg) ![](https://img.shields.io/badge/Mod%20Status-WIP-red.svg) ![Discord](https://img.shields.io/discord/538796875311218721.svg?style=plastic)
 
-Makes your Minecraft Worlds better.
+Adds Star Trek to Minecraft.
 
 ***We are currently looking for some more modelers and coders to join the team***
 ## Getting Started
