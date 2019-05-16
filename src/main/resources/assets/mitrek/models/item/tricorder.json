@@ -1,7 +1,7 @@
 {
 	"credit": "UKMinecrafted 2019",
 	"textures": {
-		"1": "MiTrek:items/tricorder"
+		"1": "mitrek:items/tricorder"
 	},
 	"elements": [
 		{
