@@ -3,7 +3,7 @@ package com.bpteammc.mitrek;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
 import com.bpteammc.mitrek.init.ModBlocks;
-com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
+import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
 import com.bpteammc.mitrek.init.ModDimensions;
 import com.bpteammc.mitrek.init.ModItems;
 import com.bpteammc.mitrek.proxy.CommonProxy;
