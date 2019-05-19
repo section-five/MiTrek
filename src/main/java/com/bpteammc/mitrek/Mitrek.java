@@ -2,13 +2,15 @@ package com.bpteammc.mitrek;
 
 import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
-import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
+import com.bpteammc.mitrek.init.ModBlocks;
+com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
 import com.bpteammc.mitrek.init.ModDimensions;
 import com.bpteammc.mitrek.init.ModItems;
 import com.bpteammc.mitrek.proxy.CommonProxy;
 import com.bpteammc.mitrek.proxy.IProxy;
 import com.bpteammc.mitrek.util.Reference;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -45,6 +47,13 @@ public class Mitrek
         @Override
         public ItemStack createIcon() {
             return new ItemStack(ModItems.TNG_COMBADGE);
+        }
+    };
+
+    public static CreativeTabs blocks = new CreativeTabs("blocks") {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(ModBlocks.STARSHIP_HULL);
         }
     };
 
