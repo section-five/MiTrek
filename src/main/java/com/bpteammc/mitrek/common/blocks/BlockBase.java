@@ -14,6 +14,7 @@ public class BlockBase extends Block implements IHasModel {
         super(material);
         setTranslationKey(name);
         setRegistryName(name);
+        setCreativeTab(Mitrek.blocks);
 
         ModBlocks.BLOCKS.add(this);
         ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
