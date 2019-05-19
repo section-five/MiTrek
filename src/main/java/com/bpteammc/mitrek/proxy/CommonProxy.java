@@ -5,7 +5,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-public class CommonProxy {
+public class CommonProxy implements IProxy {
 
 
     public void preInit(FMLPreInitializationEvent event)
@@ -20,6 +20,7 @@ public class CommonProxy {
     public void postInit(FMLPostInitializationEvent event)
     {
     }
+
     public void registerItemRenderer(Item itemFromBlock, int i, String inventory) {
     }
 }

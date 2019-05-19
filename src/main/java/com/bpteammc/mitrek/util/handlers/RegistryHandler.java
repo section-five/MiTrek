@@ -1,6 +1,8 @@
 package com.bpteammc.mitrek.util.handlers;
 
 import com.bpteammc.mitrek.Mitrek;
+import com.bpteammc.mitrek.client.renderers.RenderShipExterior_01;
+import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
 import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.init.ModItems;
 import com.bpteammc.mitrek.util.IHasModel;
@@ -10,6 +12,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -43,6 +46,10 @@ public class RegistryHandler {
 
     public static void registerTileEntity(Class<? extends TileEntity> clazz, String name) {
         GameRegistry.registerTileEntity(clazz, new ResourceLocation(Mitrek.MODID, name));
+    }
+
+    public static void preInit() {
+        ClientRegistry.bindTileEntitySpecialRenderer(TileShipExterior_01.class, new RenderShipExterior_01());
     }
 
 }

@@ -1,5 +1,6 @@
 package com.bpteammc.mitrek.common.blocks;
 
+import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
 import com.bpteammc.mitrek.util.IHasModel;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
 import net.minecraft.block.ITileEntityProvider;
@@ -25,6 +26,6 @@ public class BlockShipExterior extends BlockBase implements ITileEntityProvider,
     @Nullable
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileEntityShipExterior();
+        return new TileShipExterior_01();
     }
 }
