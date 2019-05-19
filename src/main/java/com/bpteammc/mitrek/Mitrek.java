@@ -3,9 +3,11 @@ package com.bpteammc.mitrek;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
 import com.bpteammc.mitrek.init.ModBlocks;
+com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
 import com.bpteammc.mitrek.init.ModDimensions;
 import com.bpteammc.mitrek.init.ModItems;
 import com.bpteammc.mitrek.proxy.CommonProxy;
+import com.bpteammc.mitrek.proxy.IProxy;
 import com.bpteammc.mitrek.util.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -30,7 +32,7 @@ public class Mitrek
 
 
     @SidedProxy(clientSide = Reference.CLIENTPROXY, serverSide = Reference.COMMONPROXY)
-    public static CommonProxy proxy;
+    public static IProxy proxy;
 
     public static CreativeTabs uniforms = new CreativeTabs("uniforms")
     {
@@ -61,13 +63,15 @@ public class Mitrek
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
+        proxy.preInit(event);
         ModDimensions.Register();
         registerTileEntity(TileEntityShip.class, "TileShip");
         registerTileEntity(TileEntityShipExterior.class, "TileShipExterior");
+        registerTileEntity(TileShipExterior_01.class, "TileShipExterior_01");
     }
 
     @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
+    public void init(FMLInitializationEvent event){
+        proxy.init(event);
     }
 }

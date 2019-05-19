@@ -1,21 +1,28 @@
 package com.bpteammc.mitrek.proxy;
 
+import com.bpteammc.mitrek.util.handlers.RegistryHandler;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-public class ClientProxy extends CommonProxy {
+public class ClientProxy implements IProxy {
+
+    @Override
+    public void preInit(FMLPreInitializationEvent event) {
+        RegistryHandler.preInit();
+    }
 
     @Override
     public void init(FMLInitializationEvent event) {
-        super.init(event);
+
     }
 
     @Override
     public void postInit(FMLPostInitializationEvent event) {
-        super.postInit(event);
+
     }
 
     public void registerItemRenderer(Item item, int meta, String id) {
