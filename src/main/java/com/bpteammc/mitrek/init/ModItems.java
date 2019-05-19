@@ -13,6 +13,7 @@ public class ModItems {
     //item
     public static final Item TNG_COMBADGE = new ItemCombadge("tng_combadge");
     public static final Item VOY_COMBADGE = new ItemCombadge("voy_combadge");
+    public static final Item TOS_COMMUNICATOR = new ItemCombadge("tos_communicator");
     public static final Item BATLETH = new WeaponBase("batleth", ModMaterials.BATLETH);
     public static final Item TRICORDER = new ItemTricorder("tricorder");
 
