@@ -14,7 +14,7 @@ import net.minecraft.util.ResourceLocation;
 public class RenderShipExterior_01 extends TileEntitySpecialRenderer<TileShipExterior_01> {
 
     public EnterPriseShip priseShip = new EnterPriseShip();
-    public static ResourceLocation texture = new ResourceLocation(Mitrek.MODID, "tewtures/block/enterprise");
+    public static ResourceLocation texture = new ResourceLocation(Mitrek.MODID, "tewtures/blocks/enterprise");
 
     @Override
     public void render(TileShipExterior_01 te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
