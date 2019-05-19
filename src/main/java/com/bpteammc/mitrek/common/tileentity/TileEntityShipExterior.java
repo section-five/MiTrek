@@ -8,20 +8,22 @@ public class TileEntityShipExterior extends TileEntity {
 
     private BlockPos interiorpos = BlockPos.ORIGIN;
 
-    // TODO Write things to nbt
 
-    public void setInteriorpos(BlockPos pos) {
+    public void setInteriorpos(BlockPos pos)
+    {
         this.interiorpos = pos;
     }
 
     @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
+       interiorpos = BlockPos.fromLong(compound.getLong("interiorpos"));
     }
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);
+        compound.setLong("interiorpos", interiorpos.toLong());
         return compound;
     }
 }
