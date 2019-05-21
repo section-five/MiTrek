@@ -1,7 +1,7 @@
 package com.bpteammc.mitrek.util.handlers;
 
 import com.bpteammc.mitrek.Mitrek;
-import com.bpteammc.mitrek.client.renderers.RenderShipExterior_01;
+import com.bpteammc.mitrek.client.renderers.RenderConstitutionExterior_01;
 import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
 import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.init.ModItems;
@@ -49,7 +49,7 @@ public class RegistryHandler {
     }
 
     public static void preInit() {
-        ClientRegistry.bindTileEntitySpecialRenderer(TileShipExterior_01.class, new RenderShipExterior_01());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileShipExterior_01.class, new RenderConstitutionExterior_01());
     }
 
 }
