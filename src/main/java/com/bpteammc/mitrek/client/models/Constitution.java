@@ -8,7 +8,7 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 
-public class EnterPriseShip extends ModelBase {
+public class Constitution extends ModelBase {
 	private final ModelRenderer bone;
 	private final ModelRenderer bone2;
 	private final ModelRenderer bone3;
@@ -395,7 +395,7 @@ public class EnterPriseShip extends ModelBase {
 	private final ModelRenderer bone384;
 	private final ModelRenderer bone385;
 
-	public EnterPriseShip() {
+	public Constitution() {
 		textureWidth = 512;
 		textureHeight = 512;
 
