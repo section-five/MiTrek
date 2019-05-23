@@ -2,6 +2,7 @@ package com.bpteammc.mitrek.util.helper;
 
 import com.bpteammc.mitrek.Mitrek;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
+import com.bpteammc.mitrek.common.world.InteriorGeneration;
 import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.init.ModDimensions;
 import com.bpteammc.mitrek.network.NetworkManager;
@@ -63,7 +64,7 @@ public class ShipHelper {
             if (position != null && worldServer != null) {
                 TileEntity te = worldServer.getTileEntity(position);
                 if (te == null || !(te instanceof TileEntityShip)) {
-                    //   InteriorGeneration.ROOM_LIST.get(0).generate((player.world).getMinecraftServer().getWorld(WhoDimensions.TARDISID), position);
+                    InteriorGeneration.INTERIOR_LIST.get(0).generate((player.world).getMinecraftServer().getWorld(ModDimensions.MITREKID), position);
                     worldServer.setBlockState(position, ModBlocks.SHIP_CONSOLE.getDefaultState()); // TODO Get Sub Blocks
                     TileEntityShip ship = (TileEntityShip) worldServer.getTileEntity(position);
                     ship.setDestination(pos, player.world.provider.getDimension());
