@@ -1,7 +1,7 @@
 package com.bpteammc.mitrek.client.renderers;
 
 import com.bpteammc.mitrek.Mitrek;
-import com.bpteammc.mitrek.client.models.EnterPriseShip;
+import com.bpteammc.mitrek.client.models.Constitution;
 import com.bpteammc.mitrek.common.blocks.BlockShipExterior;
 import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
 import com.bpteammc.mitrek.util.helper.RenderHelpers;
@@ -14,10 +14,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RenderShipExterior_01 extends TileEntitySpecialRenderer<TileShipExterior_01> {
+public class RenderConstitutionExterior_01 extends TileEntitySpecialRenderer<TileShipExterior_01> {
 
-    public EnterPriseShip priseShip = new EnterPriseShip();
-    public static final ResourceLocation texture = new ResourceLocation(Mitrek.MODID, "textures/block/enterprise.png");
+    public Constitution priseShip = new Constitution();
+    public static final ResourceLocation texture = new ResourceLocation(Mitrek.MODID, "textures/block/constitution.png");
 
     @Override
     public void render(TileShipExterior_01 te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
