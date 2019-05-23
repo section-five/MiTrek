@@ -69,7 +69,6 @@ public class ShipHelper {
                     ship.setDestination(pos, player.world.provider.getDimension());
                     ship.setIsinFlight(true);
                     ship.Land();
-                    System.out.println("done");
                 }
             }
         }

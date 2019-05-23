@@ -1,10 +1,14 @@
 package com.bpteammc.mitrek.common.tileentity;
 
+import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.init.ModDimensions;
+import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 
 public class TileEntityShip extends TileEntity implements ITickable {
@@ -14,6 +18,7 @@ public class TileEntityShip extends TileEntity implements ITickable {
     private BlockPos hullposition = BlockPos.ORIGIN;
     private BlockPos destination = BlockPos.ORIGIN;
     private BlockPos interiorposition = BlockPos.ORIGIN;
+    private int exteriorid = 0;
 
     private int dimension = 0;
     private int destinationdim = 0;
@@ -35,11 +40,67 @@ public class TileEntityShip extends TileEntity implements ITickable {
     }
 
     public void Land() {
-        if(getDestinationdim() != ModDimensions.MITREKID) {
-            if(isFlying) {
+        if (getDestinationdim() != ModDimensions.MITREKID) {
+            if (isFlying) {
                 World dim = getWorld().getMinecraftServer().getWorld(getDestinationdim());
-
+                dim.setBlockState(destination, getExteriorState().getDefaultState());
+                setExteriorToFade(true);
+                setHullData(dim);
+                setIsinFlight(false);
+                setCurrentLocation(destination, destinationdim);
             }
+        }else{
+            for (EntityPlayerMP player : world.getEntitiesWithinAABB(EntityPlayerMP.class, Block.FULL_BLOCK_AABB.offset(getPos()).grow(16))) {
+                player.sendStatusMessage(new TextComponentString("Can't land in the ship dimension!"), true);
+            }
+        }
+    }
+
+    public void setHullposition(BlockPos pos) {
+        this.hullposition = pos;
+    }
+
+    public BlockPos getHullposition() {
+        return hullposition;
+    }
+
+    public int getDimension() {
+        return dimension;
+    }
+
+    public int getExteriorid() {
+        return exteriorid;
+    }
+
+    public void setDimension(int dim) {
+        this.dimension = dim;
+    }
+
+    public void setCurrentLocation(BlockPos pos, int dim) {
+        setHullposition(pos);
+        setDimension(dim);
+    }
+
+    public Block getExteriorState() {
+        if (this.exteriorid == 0) {
+            return ModBlocks.SHIP_EXTERIOR;
+        }
+        return ModBlocks.SHIP_EXTERIOR;
+    }
+
+
+    public void setHullData(World dim) {
+        if (dim.getTileEntity(destination) instanceof TileEntityShipExterior) {
+            TileEntityShipExterior tileEntityShipExterior = (TileEntityShipExterior) dim.getTileEntity(destination);
+            tileEntityShipExterior.setInteriorpos(interiorposition);
+        }
+    }
+
+    public void setExteriorToFade(boolean fade) {
+        World dim = world.getMinecraftServer().getWorld(dimension);
+        if (dim.getTileEntity(hullposition) != null && dim.getTileEntity(hullposition) instanceof TileEntityShipExterior) {
+            TileEntityShipExterior ship = (TileEntityShipExterior) dim.getTileEntity(hullposition);
+            ship.setFading(fade);
         }
     }
 
@@ -52,9 +113,9 @@ public class TileEntityShip extends TileEntity implements ITickable {
         super.readFromNBT(compound);
         warping = compound.getBoolean("warping");
         isFlying = compound.getBoolean("flying");
-        hullposition  = BlockPos.fromLong(compound.getLong("hull_pos"));
-        destination  = BlockPos.fromLong(compound.getLong("destination_pos"));
-        interiorposition  = BlockPos.fromLong(compound.getLong("interior_pos"));
+        hullposition = BlockPos.fromLong(compound.getLong("hull_pos"));
+        destination = BlockPos.fromLong(compound.getLong("destination_pos"));
+        interiorposition = BlockPos.fromLong(compound.getLong("interior_pos"));
         dimension = compound.getInteger("dimension");
         destinationdim = compound.getInteger("destination_dim");
     }
