@@ -47,7 +47,6 @@ public class TileEntityShip extends TileEntity implements ITickable {
             if (isFlying) {
                 World dim = getWorld().getMinecraftServer().getWorld(getDestinationdim());
                 dim.setBlockState(destination, getExteriorState().getDefaultState());
-                this.interiorposition = new BlockPos(getPos().getX(), getPos().getY() + 1, getPos().getZ());
                 setHullData(dim);
                 setExteriorToFade(true);
                 setIsinFlight(false);
@@ -57,6 +56,18 @@ public class TileEntityShip extends TileEntity implements ITickable {
             for (EntityPlayerMP player : world.getEntitiesWithinAABB(EntityPlayerMP.class, Block.FULL_BLOCK_AABB.offset(getPos()).grow(16))) {
                 player.sendStatusMessage(new TextComponentString("Can't land in the ship dimension!"), true);
             }
+        }
+    }
+
+    public void spawnFirst() {
+        if (getDestinationdim() != ModDimensions.MITREKID) {
+            this.interiorposition = new BlockPos(getPos().getX() + 2.5, getPos().getY(), getPos().getZ() + 2.5);
+            World dim = getWorld().getMinecraftServer().getWorld(getDestinationdim());
+            dim.setBlockState(destination, getExteriorState().getDefaultState());
+            setHullData(dim);
+            setExteriorToFade(true);
+            setIsinFlight(false);
+            setCurrentLocation(destination, destinationdim);
         }
     }
 

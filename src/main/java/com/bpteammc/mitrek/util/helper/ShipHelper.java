@@ -69,7 +69,7 @@ public class ShipHelper {
                     TileEntityShip ship = (TileEntityShip) worldServer.getTileEntity(position);
                     ship.setDestination(pos, player.world.provider.getDimension());
                     ship.setIsinFlight(true);
-                    ship.Land();
+                    ship.spawnFirst();
                 }
             }
         }
