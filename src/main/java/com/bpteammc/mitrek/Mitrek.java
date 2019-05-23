@@ -6,6 +6,7 @@ import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
 import com.bpteammc.mitrek.init.ModDimensions;
 import com.bpteammc.mitrek.init.ModItems;
+import com.bpteammc.mitrek.network.NetworkManager;
 import com.bpteammc.mitrek.proxy.CommonProxy;
 import com.bpteammc.mitrek.proxy.IProxy;
 import com.bpteammc.mitrek.util.Reference;
@@ -64,6 +65,7 @@ public class Mitrek
     {
         logger = event.getModLog();
         proxy.preInit(event);
+        NetworkManager.init();
         ModDimensions.Register();
         registerTileEntity(TileEntityShip.class, "TileShip");
         registerTileEntity(TileEntityShipExterior.class, "TileShipExterior");
