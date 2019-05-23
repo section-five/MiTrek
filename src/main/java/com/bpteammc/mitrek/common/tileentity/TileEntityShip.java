@@ -25,6 +25,9 @@ public class TileEntityShip extends TileEntity implements ITickable {
 
     // TODO Write things to nbt
 
+    public TileEntityShip() {
+    }
+
     @Override
     public void update() {
 
@@ -44,8 +47,9 @@ public class TileEntityShip extends TileEntity implements ITickable {
             if (isFlying) {
                 World dim = getWorld().getMinecraftServer().getWorld(getDestinationdim());
                 dim.setBlockState(destination, getExteriorState().getDefaultState());
-                setExteriorToFade(true);
+                this.interiorposition = new BlockPos(getPos().getX(), getPos().getY() + 1, getPos().getZ());
                 setHullData(dim);
+                setExteriorToFade(true);
                 setIsinFlight(false);
                 setCurrentLocation(destination, destinationdim);
             }

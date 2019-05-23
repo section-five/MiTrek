@@ -18,6 +18,15 @@ public class TileEntityShipExterior extends TileEntity implements ITickable {
         this.alpha = 0.0f;
     }
 
+    public float getAlpha() {
+        return alpha;
+    }
+
+    public BlockPos getInteriorpos() {
+        return interiorpos;
+    }
+
+
     @Override
     public void update() {
         if (world == null) return;
