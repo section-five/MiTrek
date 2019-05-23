@@ -25,17 +25,17 @@ public class ShipHelper {
 
     public static Map<String, BlockPos> ships = new HashMap<>();
 
-    public static boolean hasTardis(UUID uuid) {
+    public static boolean hasShip(UUID uuid) {
         return ships.containsKey(uuid.toString());
     }
 
-    public static BlockPos addTardis(UUID uuid) {
-        if (!hasTardis(uuid))
-            ships.put(uuid.toString(), getFreeTardisLocation().toImmutable());
-        return getFreeTardisLocation();
+    public static BlockPos addShip(UUID uuid) {
+        if (!hasShip(uuid))
+            ships.put(uuid.toString(), getFreeShipLocation().toImmutable());
+        return getFreeShipLocation();
     }
 
-    public static BlockPos getFreeTardisLocation() {
+    public static BlockPos getFreeShipLocation() {
         if (ships.size() > 0) {
             BlockPos poslast = BlockPos.ORIGIN;
             for (BlockPos pos : ships.values().toArray(new BlockPos[]{})) {
@@ -56,9 +56,9 @@ public class ShipHelper {
         return BlockPos.ORIGIN;
     }
 
-    public static void makeTardis(EntityPlayer player, BlockPos pos) {
+    public static void makeShip(EntityPlayer player, BlockPos pos) {
         if (!player.world.isRemote) {
-            BlockPos position = addTardis(player.getUniqueID());
+            BlockPos position = addShip(player.getUniqueID());
             WorldServer worldServer = player.world.getMinecraftServer().getWorld(ModDimensions.MITREKID);
             if (position != null && worldServer != null) {
                 TileEntity te = worldServer.getTileEntity(position);
