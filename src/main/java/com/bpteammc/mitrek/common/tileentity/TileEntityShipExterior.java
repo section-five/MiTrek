@@ -1,5 +1,6 @@
 package com.bpteammc.mitrek.common.tileentity;
 
+import jdk.nashorn.internal.ir.Block;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
@@ -9,6 +10,7 @@ import net.minecraft.util.math.BlockPos;
 public class TileEntityShipExterior extends TileEntity implements ITickable {
 
     private BlockPos interiorpos = BlockPos.ORIGIN;
+    private BlockPos exteriorpos = BlockPos.ORIGIN;
     private float alpha = 1.0f;
     private boolean isRemat, isDemat = false;
 
@@ -24,6 +26,10 @@ public class TileEntityShipExterior extends TileEntity implements ITickable {
 
     public BlockPos getInteriorpos() {
         return interiorpos;
+    }
+
+    public BlockPos getExteriorpos() {
+        return exteriorpos;
     }
 
 
@@ -58,6 +64,11 @@ public class TileEntityShipExterior extends TileEntity implements ITickable {
     {
         this.interiorpos = pos;
     }
+
+    public void setExteriorpos(BlockPos pos) {
+        this.exteriorpos = pos;
+    }
+
 
     @Override
     public void readFromNBT(NBTTagCompound compound) {

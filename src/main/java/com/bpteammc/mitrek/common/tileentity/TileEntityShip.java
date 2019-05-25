@@ -2,6 +2,7 @@ package com.bpteammc.mitrek.common.tileentity;
 
 import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.init.ModDimensions;
+import com.bpteammc.mitrek.util.helper.Teleporter;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
@@ -18,12 +19,15 @@ public class TileEntityShip extends TileEntity implements ITickable {
     private BlockPos hullposition = BlockPos.ORIGIN;
     private BlockPos destination = BlockPos.ORIGIN;
     private BlockPos interiorposition = BlockPos.ORIGIN;
+    private BlockPos exteriorpos = BlockPos.ORIGIN;
     private int exteriorid = 0;
 
     private int dimension = 0;
     private int destinationdim = 0;
 
     // TODO Write things to nbt
+
+
 
     public TileEntityShip() {
     }
@@ -32,6 +36,15 @@ public class TileEntityShip extends TileEntity implements ITickable {
     public void update() {
 
     }
+
+    public BlockPos getExteriorPos() {
+        return exteriorpos;
+    }
+
+    public BlockPos setExteriorPos() {
+        return exteriorpos;
+    }
+
 
     public void setDestination(BlockPos destination1, int dim) {
         this.destination = destination1;
@@ -108,6 +121,7 @@ public class TileEntityShip extends TileEntity implements ITickable {
         if (dim.getTileEntity(destination) instanceof TileEntityShipExterior) {
             TileEntityShipExterior tileEntityShipExterior = (TileEntityShipExterior) dim.getTileEntity(destination);
             tileEntityShipExterior.setInteriorpos(interiorposition);
+            tileEntityShipExterior.setExteriorpos(exteriorpos);
         }
     }
 
