@@ -17,7 +17,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class RenderConstitutionExterior_01 extends TileEntitySpecialRenderer<TileShipExterior_01> {
 
     public Constitution priseShip = new Constitution();
-    public static final ResourceLocation texture = new ResourceLocation(Mitrek.MODID, "textures/block/constitution.png");
+    public static final ResourceLocation texture = new ResourceLocation(Mitrek.MODID, "textures/blocks/constitution.png");
 
     @Override
     public void render(TileShipExterior_01 te, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
