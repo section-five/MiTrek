@@ -16,6 +16,7 @@ public class ModItems {
     public static final Item TOS_COMMUNICATOR = new ItemCombadge("tos_communicator");
     public static final Item BATLETH = new WeaponBase("batleth", ModMaterials.BATLETH);
     public static final Item TRICORDER = new ItemTricorder("tricorder");
+    public static final Item TOS_PHASER = new ItemPhaser("tos_phaser");
 
     //Voyager Command
     public static final Item VOY_COMMAND_SHIRT = new ArmorBase("voy_command_shirt", ModMaterials.VOY_COMMAND_UNIFORM, 1, EntityEquipmentSlot.CHEST);
