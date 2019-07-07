@@ -3,7 +3,14 @@ package com.bpteammc.mitrek.common.items;
 import com.bpteammc.mitrek.Mitrek;
 import com.bpteammc.mitrek.init.ModItems;
 import com.bpteammc.mitrek.util.IHasModel;
+import com.bpteammc.mitrek.util.helper.ShootWeapon;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
 
 public class ItemPhaser extends Item implements IHasModel {
 
@@ -20,4 +27,11 @@ public class ItemPhaser extends Item implements IHasModel {
         Mitrek.proxy.registerItemRenderer(this, 0, "inventory");
     }
 
+
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+        playerIn.setActiveHand(handIn);
+        ItemStack stack = playerIn.getActiveItemStack();
+        ShootWeapon.Beam(playerIn, worldIn, stack);
+        return super.onItemRightClick(worldIn, playerIn, handIn);
+    }
 }

@@ -2,6 +2,7 @@ package com.bpteammc.mitrek.util.handlers;
 
 import com.bpteammc.mitrek.Mitrek;
 import com.bpteammc.mitrek.client.renderers.RenderConstitutionExterior_01;
+import com.bpteammc.mitrek.common.entity.EntityBeam;
 import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
 import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.init.ModItems;
@@ -15,7 +16,10 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.EntityEntry;
+import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.registries.IForgeRegistry;
 
 @EventBusSubscriber
 public class RegistryHandler {
@@ -52,4 +56,14 @@ public class RegistryHandler {
         ClientRegistry.bindTileEntitySpecialRenderer(TileShipExterior_01.class, new RenderConstitutionExterior_01());
     }
 
+    public static void addEntities(RegistryEvent.Register<EntityEntry> e) {
+        IForgeRegistry<EntityEntry> reg = e.getRegistry();
+        reg.registerAll(EntityEntries.BEAM);
+    }
+
+    // Entities
+    @GameRegistry.ObjectHolder(Mitrek.MODID)
+    public static class EntityEntries {
+        public static final EntityEntry BEAM = EntityEntryBuilder.create().entity(EntityBeam.class).id(new ResourceLocation(Mitrek.MODID, "ray"), 0).name("ray").tracker(80, 3, true).build();
+    }
 }
