@@ -2,13 +2,10 @@ package com.bpteammc.mitrek.common.tileentity;
 
 import com.bpteammc.mitrek.init.ModDimensions;
 import com.bpteammc.mitrek.util.helper.Teleporter;
-import ibxm.Player;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
-import net.minecraft.world.World;
 
 public class TileEntityShipTransporter extends TileEntity implements ITickable {
 
@@ -16,7 +13,7 @@ public class TileEntityShipTransporter extends TileEntity implements ITickable {
     private int exteriordimension = 0;
 
     public void ExitShip(EntityPlayerMP player) {
-        if(player.dimension != 0)
+        if(player.dimension != ModDimensions.MITREKID)
         {
             world.getMinecraftServer().getPlayerList().transferPlayerToDimension(player, getExteriordimension(), new Teleporter(new BlockPos(pos.getX(), pos.getY(), pos.getZ())));
             player.connection.setPlayerLocation(getExteriorpos().getX(), getExteriorpos().getY() + 1, getExteriorpos().getZ(), 1, 1);
@@ -34,8 +31,6 @@ public class TileEntityShipTransporter extends TileEntity implements ITickable {
     @Override
     public void update() {
         if (!world.isRemote) {
-            World dim = world.getMinecraftServer().getWorld(exteriordimension);
-
         }
     }
 }
