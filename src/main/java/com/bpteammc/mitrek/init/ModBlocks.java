@@ -24,6 +24,16 @@ public class ModBlocks {
     public static final Block TOS_MIDDLE_PANEL_1 = new BlockBase("tos_middle_panel_1", Material.ROCK);
     public static final Block TOS_MIDDLE_PANEL_2 = new BlockBase("tos_middle_panel_2", Material.ROCK);
     public static final Block TOS_MIDDLE_PANEL_3 = new BlockBase("tos_middle_panel_3", Material.ROCK);
+
+
+
+
+
+
+
+
+
+
     public static final Block TOS_TOP_PANEL_1 = new BlockBase("tos_top_panel_1", Material.ROCK);
     public static final Block TOS_TOP_PANEL_2 = new BlockBase("tos_top_panel_2", Material.ROCK);
 }
