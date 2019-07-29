@@ -128,8 +128,4 @@ public class ShipGUI extends GuiScreen {
         zcoord.updateCursorCounter();
         super.updateScreen();
     }
-
-    public enum XYZ {
-        X, Y, Z
-    }
 }
