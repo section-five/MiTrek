@@ -27,8 +27,7 @@ public class Mitrek {
     public static final String MODID = "mitrek";
     public static final String NAME = "MiTrek";
     public static final String VERSION = "1.0";
-    public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2813,)";
-    public static final String UPDATEURL = "https://raw.githubusercontent.com/ukminecrafted/MiTrek/master/update.json";
+
 
 
     @SidedProxy(clientSide = Reference.CLIENTPROXY, serverSide = Reference.COMMONPROXY)
