@@ -18,6 +18,9 @@ public class ModBlocks {
     public static final Block SHIP_CONSOLE = new BlockConsole("ship_console", Material.IRON);
     public static final Block SHIP_DOOR = new BlockShipDoor("ship_door", Material.IRON);
     public static final Block STARSHIP_HULL = new BlockBase("starship_hull", Material.ROCK);
+
+  //TOS BLOCKS
+    public static final Block TOS_FLOOR = new BlockBase("tos_floor", Material.ROCK);
     public static final Block TOS_LOWER_PANEL_1 = new BlockBase("tos_lower_panel_1", Material.ROCK);
     public static final Block TOS_LOWER_PANEL_2 = new BlockBase("tos_lower_panel_2", Material.ROCK);
     public static final Block TOS_LOWER_PANEL_3 = new BlockBase("tos_lower_panel_3", Material.ROCK);
@@ -26,4 +29,5 @@ public class ModBlocks {
     public static final Block TOS_MIDDLE_PANEL_3 = new BlockBase("tos_middle_panel_3", Material.ROCK);
     public static final Block TOS_TOP_PANEL_1 = new BlockBase("tos_top_panel_1", Material.ROCK);
     public static final Block TOS_TOP_PANEL_2 = new BlockBase("tos_top_panel_2", Material.ROCK);
+
 }
