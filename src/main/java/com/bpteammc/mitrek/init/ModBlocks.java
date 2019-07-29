@@ -30,4 +30,10 @@ public class ModBlocks {
     public static final Block TOS_TOP_PANEL_1 = new BlockBase("tos_top_panel_1", Material.ROCK);
     public static final Block TOS_TOP_PANEL_2 = new BlockBase("tos_top_panel_2", Material.ROCK);
 
+    //TNG BLOCKS
+    public static final Block TNG_LIGHT_BLOCK = new BlockBase("tng_light_block", Material.GLASS);
+   /* public static final Block
+    public static final Block
+    public static final Block*/
+
 }
