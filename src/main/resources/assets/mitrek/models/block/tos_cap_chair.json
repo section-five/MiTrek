@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "blocks/TOS_Cap_Chair_Text",
-		"particle": "blocks/TOS_Cap_Chair_Text"
+		"0": "mitrek:blocks/tos_cap_chair",
+		"particle": "mitrek:blocks/tos_cap_chair"
 	},
 	"elements": [
 		{
