@@ -4,7 +4,10 @@ import com.bpteammc.mitrek.common.blocks.BlockBase;
 import com.bpteammc.mitrek.common.blocks.BlockConsole;
 import com.bpteammc.mitrek.common.blocks.BlockShipDoor;
 import com.bpteammc.mitrek.common.blocks.BlockShipExterior;
+import com.bpteammc.mitrek.common.blocks.slab.BlockDoubleSlabBase;
+import com.bpteammc.mitrek.common.blocks.slab.BlockHalfSlabBase;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 
 import java.util.ArrayList;
@@ -27,8 +30,15 @@ public class ModBlocks {
     public static final Block TOS_MIDDLE_PANEL_1 = new BlockBase("tos_middle_panel_1", Material.ROCK);
     public static final Block TOS_MIDDLE_PANEL_2 = new BlockBase("tos_middle_panel_2", Material.ROCK);
     public static final Block TOS_MIDDLE_PANEL_3 = new BlockBase("tos_middle_panel_3", Material.ROCK);
-    public static final Block TOS_TOP_PANEL_1 = new BlockBase("tos_top_panel_1", Material.ROCK);
-    public static final Block TOS_TOP_PANEL_2 = new BlockBase("tos_top_panel_2", Material.ROCK);
+    public static final Block TOS_TOP_PANEL_LT = new BlockBase("tos_top_panel_lt", Material.ROCK);
+    public static final Block TOS_TOP_PANEL_LB = new BlockBase("tos_top_panel_lb", Material.ROCK);
+    public static final Block TOS_TOP_PANEL_MT = new BlockBase("tos_top_panel_mt", Material.ROCK);
+    public static final Block TOS_TOP_PANEL_MB = new BlockBase("tos_top_panel_mb", Material.ROCK);
+    public static final Block TOS_TOP_PANEL_RT = new BlockBase("tos_top_panel_rt", Material.ROCK);
+    public static final Block TOS_TOP_PANEL_RB = new BlockBase("tos_top_panel_rb", Material.ROCK);
+    public static final BlockSlab TOS_FLOOR_SLAB_HALF = new BlockHalfSlabBase("tos_floor_slab_half", Material.ROCK, ModBlocks.TOS_FLOOR_SLAB_HALF, ModBlocks.TOS_FLOOR_SLAB_DOUBLE);
+    public static final BlockSlab TOS_FLOOR_SLAB_DOUBLE = new BlockDoubleSlabBase("tos_floor_slab_double", Material.ROCK, ModBlocks.TOS_FLOOR_SLAB_HALF);
+    public static final Block TOS_WALL = new BlockBase("tos_wall", Material.ROCK);
 
     //TNG BLOCKS
     public static final Block TNG_LIGHT_BLOCK = new BlockBase("tng_light_block", Material.GLASS);
