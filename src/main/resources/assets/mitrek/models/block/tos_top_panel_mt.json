@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "mitrek:blocks/tos_top_panel_mt"
+    "all": "mitrek:blocks/tos_top_panel_tm"
   }
 }
