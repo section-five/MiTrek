@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "mitrek:blocks/tos_lower_panel_1",
+    "side": "mitrek:blocks/tos_ceiling"
+  }
+}

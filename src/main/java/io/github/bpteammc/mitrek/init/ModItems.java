@@ -1,6 +1,5 @@
 package io.github.bpteammc.mitrek.init;
 
-import com.bpteammc.mitrek.common.items.*;
 import io.github.bpteammc.mitrek.common.items.*;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
