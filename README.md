@@ -30,6 +30,7 @@ For Versions we use this format: Release.Beta.Alpha/Patch As an example a releas
 * **[UKMinecrafted](https://GitHub.com/UKMinecrafted)** - *Mod Creator, Coder and Modeler*
 * **[Josia50](https://GitHub.com/Josia50)** - *BPTeam, Coder*
 * **[Ben1Ben1](https://GitHub.com/Ben1Ben1)** - *BPTeam, Modeler*
+* **Berenvonbaggins** - *BPTeam, Modeler*
 
 ## Contributors
 
