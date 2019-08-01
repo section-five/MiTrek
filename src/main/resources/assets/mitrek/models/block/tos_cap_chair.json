@@ -1,5 +1,5 @@
 {
-	"credit": "Made with Blockbench",
+	"credit": "BERENVONBAGGINS",
 	"textures": {
 		"0": "mitrek:blocks/tos_cap_chair",
 		"particle": "mitrek:blocks/tos_cap_chair"
@@ -332,7 +332,7 @@
 		"fixed": {
 			"rotation": [0, 90, 0],
 			"translation": [-1.25, 4.75, 0],
-			"scale": [1.5, 1.5, 1.5]
+			"scale": [2.5, 2.5, 2.5]
 		}
 	},
 	"groups": [
