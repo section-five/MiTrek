@@ -40,10 +40,10 @@ public class ModBlocks {
     public static final BlockSlab TOS_FLOOR_SLAB_DOUBLE = new BlockDoubleSlabBase("tos_floor_slab_double", Material.ROCK, ModBlocks.TOS_FLOOR_SLAB_HALF);
     public static final Block TOS_WALL = new BlockBase("tos_wall", Material.ROCK);
     public static final Block TOS_CAP_CHAIR = new BlockBase("tos_cap_chair", Material.CARPET);
-    public static final Block TOS_CELING_1 = new BlockBase("tos_celing_1", Material.ROCK);
-    public static final Block TOS_CELING_2 = new BlockBase("tos_celing_2", Material.ROCK);
-    public static final Block TOS_CELING_3 = new BlockBase("tos_celing_3", Material.ROCK);
-    public static final Block TOS_CELING_4 = new BlockBase("tos_celing_4", Material.ROCK);
+    public static final Block TOS_CEILING_1 = new BlockBase("tos_ceiling_1", Material.ROCK);
+    public static final Block TOS_CEILING_2 = new BlockBase("tos_ceiling_2", Material.ROCK);
+    public static final Block TOS_CEILING_3 = new BlockBase("tos_ceiling_3", Material.ROCK);
+    public static final Block TOS_CEILING_4 = new BlockBase("tos_ceiling_4", Material.ROCK);
 
     //TNG BLOCKS
     public static final Block TNG_LIGHT_BLOCK = new BlockBase("tng_light_block", Material.GLASS);
