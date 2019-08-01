@@ -1,9 +1,6 @@
 package com.bpteammc.mitrek.init;
 
-import com.bpteammc.mitrek.common.blocks.BlockBase;
-import com.bpteammc.mitrek.common.blocks.BlockConsole;
-import com.bpteammc.mitrek.common.blocks.BlockShipDoor;
-import com.bpteammc.mitrek.common.blocks.BlockShipExterior;
+import com.bpteammc.mitrek.common.blocks.*;
 import com.bpteammc.mitrek.common.blocks.slab.BlockDoubleSlabBase;
 import com.bpteammc.mitrek.common.blocks.slab.BlockHalfSlabBase;
 import net.minecraft.block.Block;
@@ -46,7 +43,7 @@ public class ModBlocks {
     public static final Block TOS_CEILING_4 = new BlockBase("tos_ceiling_4", Material.ROCK);
 
     //TNG BLOCKS
-    public static final Block TNG_LIGHT_BLOCK = new BlockBase("tng_light_block", Material.GLASS);
+    public static final Block TNG_LIGHT_BLOCK = new LightBlockBase("tng_light_block", Material.GLASS);
    /* public static final Block
     public static final Block
     public static final Block*/
