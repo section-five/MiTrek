@@ -43,6 +43,7 @@ public class ShipHelper {
                 if (pos.getX() > poslast.getX() && pos.getZ() > poslast.getZ())
                     poslast = pos;
             }
+            System.out.println("wtf");
             return poslast.add(ship_size * 20, 0, ship_size * 20);
         }
         return new BlockPos(1, 100, 1);
@@ -50,7 +51,10 @@ public class ShipHelper {
 
     public static BlockPos getTardis(Vec3i vec3i) {
         for (BlockPos pos : ships.values()) {
-            if (pos.getDistance(vec3i.getX(), vec3i.getY(), vec3i.getZ()) < (ship_size * ship_size) / 2) {
+         //   System.out.println(pos.getDistance(vec3i.getX(), vec3i.getY(), vec3i.getZ()) < (ship_size * ship_size) / 2);
+            System.out.println(pos);
+            if (pos.getDistance(vec3i.getX(), vec3i.getY(), vec3i.getZ()) < (ship_size * ship_size) / 2) { //(ship_size * ship_size) / 2
+
                 return pos;
             }
         }

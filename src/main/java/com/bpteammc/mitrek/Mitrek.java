@@ -1,5 +1,6 @@
 package com.bpteammc.mitrek;
 
+import com.bpteammc.mitrek.common.ship.data.ShipSaver;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
 import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
@@ -10,14 +11,18 @@ import com.bpteammc.mitrek.init.ModItems;
 import com.bpteammc.mitrek.network.NetworkManager;
 import com.bpteammc.mitrek.proxy.IProxy;
 import com.bpteammc.mitrek.util.Reference;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import org.apache.logging.log4j.Logger;
 
 import static com.bpteammc.mitrek.util.handlers.RegistryHandler.registerTileEntity;
@@ -28,6 +33,9 @@ public class Mitrek {
     public static final String NAME = "MiTrek";
     public static final String VERSION = "0.0.1";
 
+
+    public static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
+    public static FMLCommonHandler FML = FMLCommonHandler.instance();
 
 
     @SidedProxy(clientSide = Reference.CLIENTPROXY, serverSide = Reference.COMMONPROXY)
@@ -66,6 +74,12 @@ public class Mitrek {
         registerTileEntity(TileEntityShipExterior.class, "TileShipExterior");
         registerTileEntity(TileShipExterior_01.class, "TileShipExterior_01");
         InteriorGeneration.registerConsoleRoom("shiptest", new BlockPos(16, 1, 16));
+    }
+
+    @EventHandler
+    public void serverStart(FMLServerStartingEvent e) {
+        ShipSaver.ships.clear();
+
     }
 
     @EventHandler
