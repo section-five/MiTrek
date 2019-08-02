@@ -17,6 +17,7 @@ public class ItemPhaser extends Item implements IHasModel {
     public ItemPhaser(String name) {
         setTranslationKey(name);
         setRegistryName(name);
+        setMaxStackSize(1);
         setCreativeTab(Mitrek.items);
 
         ModItems.ITEMS.add(this);
