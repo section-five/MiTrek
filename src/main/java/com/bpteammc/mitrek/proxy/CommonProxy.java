@@ -10,6 +10,7 @@ public class CommonProxy implements IProxy {
 
     public void preInit(FMLPreInitializationEvent event)
     {
+
     }
 
     public void init(FMLInitializationEvent event)

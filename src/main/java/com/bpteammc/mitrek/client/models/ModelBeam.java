@@ -18,7 +18,7 @@ public class ModelBeam extends ModelBase {
 	private final ModelRenderer beam;
 
 
-	public ModelBeam(World worldIn, EntityPlayer entityplayer, int damage, DamageSource BEAM, Vec3d vec3d) {
+	public ModelBeam() {
 		textureWidth = 64;
 		textureHeight = 64;
 
