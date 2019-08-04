@@ -31,7 +31,7 @@ import static com.bpteammc.mitrek.util.handlers.RegistryHandler.registerTileEnti
 public class Mitrek {
     public static final String MODID = "mitrek";
     public static final String NAME = "MiTrek";
-    public static final String VERSION = "0.0.3";
+    public static final String VERSION = "0.0.4";
 
 
     public static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
@@ -51,7 +51,7 @@ public class Mitrek {
     public static CreativeTabs items = new CreativeTabs("items") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModItems.TNG_COMBADGE);
+            return new ItemStack(ModItems.TOS_PHASER);
         }
     };
 
