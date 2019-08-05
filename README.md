@@ -22,7 +22,7 @@ and click play and enjoy
 
 **Or you could just use the [Twitch/Curse Client](https://app.twitch.tv/download)**
 ## Versioning
-
+// TODO change versioning
 For Versions we use this format: Release.Beta.Alpha/Patch As an example a release could look like this 1.5.2, this means that it is version *1* beta *5* and alpha or patch *2*
 
 ## Authors

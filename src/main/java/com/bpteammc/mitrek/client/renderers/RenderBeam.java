@@ -4,7 +4,6 @@ import com.bpteammc.mitrek.Mitrek;
 import com.bpteammc.mitrek.client.models.ModelBeam;
 import com.bpteammc.mitrek.common.entity.EntityBeam;
 import com.bpteammc.mitrek.util.helper.RenderUtil;
-import net.minecraft.client.model.ModelGhast;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -14,12 +13,14 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
 public class RenderBeam extends Render<EntityBeam> {
+    private Entity EntityBeam;
+
     public RenderBeam(RenderManager renderManager) {
         super(renderManager);
     }
     public ModelBeam beam = new ModelBeam();
     public static final ResourceLocation texture = new ResourceLocation(Mitrek.MODID, "textures/items/beam.png");
-
+// TODO render beam model for this
 
 
     @Override
@@ -53,7 +54,7 @@ public class RenderBeam extends Render<EntityBeam> {
         RenderUtil.drawGlowingLine(Vec3d.ZERO, new Vec3d(0, 0, 1), 0.5F, entity.color);
         RenderUtil.finishRenderLightning();
 
-        beam.render(null, 0,0,0,0,0,1f);
+        beam.render(EntityBeam, 0,0,0,0,0,1f);
     }
 
     @Override

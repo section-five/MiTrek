@@ -13,14 +13,13 @@ import java.util.List;
 public class ModBlocks {
 
     public static final List<Block> BLOCKS = new ArrayList<Block>();
-
     public static final Block SHIP_EXTERIOR = new BlockShipExterior("ship_exterior", Material.IRON);
     public static final Block SHIP_CONSOLE = new BlockConsole("ship_console", Material.IRON);
-    public static final Block SHIP_DOOR = new BlockShipDoor("ship_door", Material.IRON);
     public static final Block STARSHIP_HULL = new BlockBase("starship_hull", Material.ROCK);
     public static final Block LIGHT_BARRIER = new BlockTransparent("light_barrier");
 
     //TOS BLOCKS
+    public static final Block TOS_SHIP_DOOR = new BlockShipDoor("tos_ship_door", Material.IRON);
     public static final Block TOS_FLOOR = new BlockBase("tos_floor", Material.ROCK);
     public static final Block TOS_LOWER_PANEL_1 = new LightBlockBase("tos_lower_panel_1", Material.ROCK);
     public static final Block TOS_LOWER_PANEL_2 = new LightBlockBase("tos_lower_panel_2", Material.ROCK);
@@ -51,6 +50,5 @@ public class ModBlocks {
     public static final Block TNG_LIGHT_BLOCK = new LightBlockBase("tng_light_block", Material.GLASS);
     public static final Block TNG_TAN_BLOCK = new BlockBase("tng_tan_block", Material.ROCK);
     public static final Block TNG_SIDE_PANEL/*Server looking block*/ = new BlockBase("tng_side_panel", Material.ROCK);
-    //public static final Block
-
+    // TODO add Voyager, Deep Space Nine, Enterprise, Discovery blocks and finish adding TNG Blocks
 }

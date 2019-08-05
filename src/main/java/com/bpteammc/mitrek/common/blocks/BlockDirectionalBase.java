@@ -4,7 +4,6 @@ import com.bpteammc.mitrek.Mitrek;
 import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.init.ModItems;
 import com.bpteammc.mitrek.util.IHasModel;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;

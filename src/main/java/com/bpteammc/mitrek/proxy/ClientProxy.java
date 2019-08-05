@@ -1,7 +1,7 @@
 package com.bpteammc.mitrek.proxy;
 
 import com.bpteammc.mitrek.client.renderers.RenderConstitutionExterior_01;
-import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
+import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExteriorConstitution;
 import com.bpteammc.mitrek.util.handlers.RegistryHandler;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -16,7 +16,7 @@ public class ClientProxy implements IProxy {
     @Override
     public void preInit(FMLPreInitializationEvent event) {
         RegistryHandler.preInit();
-        ClientRegistry.bindTileEntitySpecialRenderer(TileShipExterior_01.class, new RenderConstitutionExterior_01());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileShipExteriorConstitution.class, new RenderConstitutionExterior_01());
 
     }
 

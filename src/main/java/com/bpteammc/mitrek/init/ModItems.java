@@ -47,4 +47,7 @@ public class ModItems {
     public static final Item TNG_MEDICAL_SHIRT = new ArmorBase("tng_medical_shirt", ModMaterials.TNG_MEDICAL_UNIFORM, 1, EntityEquipmentSlot.CHEST);
     public static final Item TNG_MEDICAL_PANTS = new ArmorBase("tng_medical_pants", ModMaterials.TNG_MEDICAL_UNIFORM, 2, EntityEquipmentSlot.LEGS);
     public static final Item TNG_MEDICAL_BOOTS = new ArmorBase("tng_medical_boots", ModMaterials.TNG_MEDICAL_UNIFORM, 1, EntityEquipmentSlot.FEET);
+
+    //TOS Command
+    public static final Item TOS_COMMAND_SHIRT = new ArmorBase("tos_command_shirt", ModMaterials.TOS_COMMAND_UNIFORM, 1, EntityEquipmentSlot.CHEST);
 }

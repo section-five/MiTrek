@@ -3,7 +3,7 @@ package com.bpteammc.mitrek.util.handlers;
 import com.bpteammc.mitrek.Mitrek;
 import com.bpteammc.mitrek.client.renderers.RenderConstitutionExterior_01;
 import com.bpteammc.mitrek.common.entity.EntityBeam;
-import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
+import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExteriorConstitution;
 import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.init.ModItems;
 import com.bpteammc.mitrek.util.IHasModel;
@@ -56,7 +56,7 @@ public class RegistryHandler {
 
     @SideOnly(Side.CLIENT)
     public static void preInit() {
-       ClientRegistry.bindTileEntitySpecialRenderer(TileShipExterior_01.class, new RenderConstitutionExterior_01());
+       ClientRegistry.bindTileEntitySpecialRenderer(TileShipExteriorConstitution.class, new RenderConstitutionExterior_01());
     }
 
     public static void addEntities(RegistryEvent.Register<EntityEntry> e) {

@@ -3,7 +3,7 @@ package com.bpteammc.mitrek;
 import com.bpteammc.mitrek.common.ship.data.ShipSaver;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
-import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
+import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExteriorConstitution;
 import com.bpteammc.mitrek.common.world.InteriorGeneration;
 import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.init.ModDimensions;
@@ -27,11 +27,12 @@ import org.apache.logging.log4j.Logger;
 
 import static com.bpteammc.mitrek.util.handlers.RegistryHandler.registerTileEntity;
 
-@Mod(modid = Mitrek.MODID, name = Mitrek.NAME, version = Mitrek.VERSION)
+@Mod(modid = Mitrek.MODID, name = Mitrek.NAME, version = Mitrek.VERSION,  updateJSON = Mitrek.UPDATEURL)
 public class Mitrek {
     public static final String MODID = "mitrek";
     public static final String NAME = "MiTrek";
     public static final String VERSION = "0.0.4";
+    public static final String UPDATEURL = "https://raw.githubusercontent.com/bpteammc/mitrek/master/update.json";
 
 
     public static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
@@ -72,7 +73,7 @@ public class Mitrek {
         ModDimensions.Register();
         registerTileEntity(TileEntityShip.class, "TileShip");
         registerTileEntity(TileEntityShipExterior.class, "TileShipExterior");
-        registerTileEntity(TileShipExterior_01.class, "TileShipExterior_01");
+        registerTileEntity(TileShipExteriorConstitution.class, "TileShipExteriorConstitution");
         InteriorGeneration.registerConsoleRoom("shiptest", new BlockPos(16, 1, 16));
     }
 
