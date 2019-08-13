@@ -15,7 +15,7 @@ public class ArmorBase extends ItemArmor implements IHasModel {
         super(materialIn, renderIndexIn, equipmentSlotIn);
         setTranslationKey(name);
         setRegistryName(name);
-        setCreativeTab(Mitrek.uniforms);
+        //setCreativeTab(Mitrek.uniforms);
         setMaxStackSize(1);
 
         ModItems.ITEMS.add(this);

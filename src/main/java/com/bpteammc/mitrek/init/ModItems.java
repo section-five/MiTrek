@@ -18,7 +18,7 @@ public class ModItems {
     public static final Item TRICORDER = new ItemTricorder("tricorder");
     public static final Item TOS_PHASER = new ItemPhaser("tos_phaser");
 
-    //Voyager Command
+   /* //Voyager Command
     public static final Item VOY_COMMAND_SHIRT = new ArmorBase("voy_command_shirt", ModMaterials.VOY_COMMAND_UNIFORM, 1, EntityEquipmentSlot.CHEST);
     public static final Item VOY_COMMAND_PANTS = new ArmorBase("voy_command_pants", ModMaterials.VOY_COMMAND_UNIFORM, 2, EntityEquipmentSlot.LEGS);
     public static final Item VOY_COMMAND_BOOTS = new ArmorBase("voy_command_boots", ModMaterials.VOY_COMMAND_UNIFORM, 1, EntityEquipmentSlot.FEET);
@@ -49,5 +49,5 @@ public class ModItems {
     public static final Item TNG_MEDICAL_BOOTS = new ArmorBase("tng_medical_boots", ModMaterials.TNG_MEDICAL_UNIFORM, 1, EntityEquipmentSlot.FEET);
 
     //TOS Command
-    public static final Item TOS_COMMAND_SHIRT = new ArmorBase("tos_command_shirt", ModMaterials.TOS_COMMAND_UNIFORM, 1, EntityEquipmentSlot.CHEST);
+    public static final Item TOS_COMMAND_SHIRT = new ArmorBase("tos_command_shirt", ModMaterials.TOS_COMMAND_UNIFORM, 1, EntityEquipmentSlot.CHEST); */
 }

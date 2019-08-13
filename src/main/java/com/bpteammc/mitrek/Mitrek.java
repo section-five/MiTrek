@@ -42,12 +42,12 @@ public class Mitrek {
     @SidedProxy(clientSide = Reference.CLIENTPROXY, serverSide = Reference.COMMONPROXY)
     public static IProxy proxy;
 
-    public static CreativeTabs uniforms = new CreativeTabs("uniforms") {
+    /*public static CreativeTabs uniforms = new CreativeTabs("uniforms") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(ModItems.TNG_COMBADGE);
         }
-    };
+    };*/
 
     public static CreativeTabs items = new CreativeTabs("items") {
         @Override
