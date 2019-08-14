@@ -34,6 +34,8 @@ public class Mitrek {
     public static final String VERSION = "0.0.4";
     public static final String UPDATEURL = "https://raw.githubusercontent.com/bpteammc/mitrek/master/update.json";
 
+    @Mod.Instance
+    public static Mitrek instance;
 
     public static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     public static FMLCommonHandler FML = FMLCommonHandler.instance();

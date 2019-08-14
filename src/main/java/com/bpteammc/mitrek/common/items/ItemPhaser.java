@@ -18,6 +18,7 @@ public class ItemPhaser extends Item implements IHasModel {
         setRegistryName(name);
         setMaxStackSize(1);
         setCreativeTab(Mitrek.items);
+        setMaxStackSize(1);
 
         ModItems.ITEMS.add(this);
     }

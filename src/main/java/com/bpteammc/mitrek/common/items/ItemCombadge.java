@@ -11,6 +11,7 @@ public class ItemCombadge extends Item implements IHasModel {
         setTranslationKey(name);
         setRegistryName(name);
         setCreativeTab(Mitrek.items);
+        setMaxStackSize(1);
 
         ModItems.ITEMS.add(this);
     }
