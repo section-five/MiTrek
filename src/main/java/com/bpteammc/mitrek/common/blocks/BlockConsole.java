@@ -1,8 +1,8 @@
 package com.bpteammc.mitrek.common.blocks;
 
 import com.bpteammc.mitrek.client.gui.ShipGUI;
-import com.bpteammc.mitrek.util.IHasModel;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
+import com.bpteammc.mitrek.util.IHasModel;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

@@ -2,7 +2,6 @@ package com.bpteammc.mitrek.common.tileentity;
 
 import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.init.ModDimensions;
-import com.bpteammc.mitrek.util.helper.Teleporter;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;

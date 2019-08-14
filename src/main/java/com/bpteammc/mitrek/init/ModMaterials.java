@@ -37,6 +37,10 @@ public class ModMaterials {
     public static final ItemArmor.ArmorMaterial DIS_ENGINEERING_UNIFORM = EnumHelper.addArmorMaterial("dis_engineering_uniform", Mitrek.MODID + ":dis_engineering", 15, new int[] {3,6,8,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
     public static final ItemArmor.ArmorMaterial DIS_MEDICAL_UNIFORM = EnumHelper.addArmorMaterial("dis_medical_uniform", Mitrek.MODID + ":dis_medical", 15, new int[] {3,6,8,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
 
+    //TOS Uniforms
+    public static final ItemArmor.ArmorMaterial TOS_COMMAND_UNIFORM = EnumHelper.addArmorMaterial("tos_command_uniform", Mitrek.MODID + ":tos_command", 15, new int[] {3,6,8,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.0F);
+
+
 //tools
     public static final ItemTool.ToolMaterial BATLETH = EnumHelper.addToolMaterial("batleth", 0, 1024, 1, 5, 1);
 }

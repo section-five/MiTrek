@@ -1,8 +1,8 @@
 package com.bpteammc.mitrek.common.items;
 
 import com.bpteammc.mitrek.Mitrek;
-import com.bpteammc.mitrek.util.IHasModel;
 import com.bpteammc.mitrek.init.ModItems;
+import com.bpteammc.mitrek.util.IHasModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
@@ -15,7 +15,7 @@ public class ArmorBase extends ItemArmor implements IHasModel {
         super(materialIn, renderIndexIn, equipmentSlotIn);
         setTranslationKey(name);
         setRegistryName(name);
-        setCreativeTab(Mitrek.uniforms);
+        //setCreativeTab(Mitrek.uniforms);
         setMaxStackSize(1);
 
         ModItems.ITEMS.add(this);

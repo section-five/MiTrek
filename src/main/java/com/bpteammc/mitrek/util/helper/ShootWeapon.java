@@ -3,6 +3,7 @@ package com.bpteammc.mitrek.util.helper;
 import com.bpteammc.mitrek.common.damage.IDamageSource;
 import com.bpteammc.mitrek.common.entity.EntityBeam;
 import com.bpteammc.mitrek.init.ModItems;
+import com.bpteammc.mitrek.util.handlers.SoundsHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Vec3d;
@@ -12,9 +13,9 @@ public class ShootWeapon {
 
     public static void Beam(EntityPlayer entityplayer, World worldIn, ItemStack stack) {
         if (worldIn.isRemote && !entityplayer.isSneaking() && entityplayer.getHeldItemOffhand().getItem() != ModItems.TOS_PHASER) {
-            //entityplayer.playSound(SoundsHandler.GAUNTLET_HUM, 1, 1);
+            entityplayer.playSound(SoundsHandler.TOS_SHOOT, 1, 1);
         }
-        ShootWeapon.ShootBeam(entityplayer, worldIn, 100, 1,0 ,5);
+        ShootWeapon.ShootBeam(entityplayer, worldIn, 100, 1, 0, 5);
     }
 
     public static void ShootBeam(EntityPlayer entityplayer, World worldIn, int damage, int r, int g, int b) {

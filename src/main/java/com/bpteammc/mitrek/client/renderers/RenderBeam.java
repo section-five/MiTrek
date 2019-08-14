@@ -1,5 +1,7 @@
 package com.bpteammc.mitrek.client.renderers;
 
+import com.bpteammc.mitrek.Mitrek;
+import com.bpteammc.mitrek.client.models.ModelBeam;
 import com.bpteammc.mitrek.common.entity.EntityBeam;
 import com.bpteammc.mitrek.util.helper.RenderUtil;
 import net.minecraft.client.renderer.GlStateManager;
@@ -11,9 +13,15 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
 public class RenderBeam extends Render<EntityBeam> {
+    private Entity EntityBeam;
+
     public RenderBeam(RenderManager renderManager) {
         super(renderManager);
     }
+    public ModelBeam beam = new ModelBeam();
+    public static final ResourceLocation texture = new ResourceLocation(Mitrek.MODID, "textures/items/beam.png");
+// TODO render beam model for this
+
 
     @Override
     public void doRenderShadowAndFire(Entity entityIn, double x, double y, double z, float yaw, float partialTicks) {
@@ -45,6 +53,8 @@ public class RenderBeam extends Render<EntityBeam> {
         GlStateManager.rotate(pitch, 1.0F, 0.0F, 0.0F);
         RenderUtil.drawGlowingLine(Vec3d.ZERO, new Vec3d(0, 0, 1), 0.5F, entity.color);
         RenderUtil.finishRenderLightning();
+
+        beam.render(EntityBeam, 0,0,0,0,0,1f);
     }
 
     @Override

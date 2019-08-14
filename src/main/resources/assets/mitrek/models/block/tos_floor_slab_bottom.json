@@ -1,0 +1,9 @@
+{
+  "parent": "block/half_slab",
+  "textures":
+  {
+    "bottom": "mitrek:blocks/tos_wall",
+    "top": "mitrek:blocks/tos_wall",
+    "side": "mitrek:blocks/tos_wall"
+  }
+}

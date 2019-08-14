@@ -1,6 +1,8 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/orientable",
   "textures": {
-    "all": "mitrek:blocks/tos_middle_panel_1"
+    "top": "mitrek:blocks/tos_middle_panel_side",
+    "front": "mitrek:blocks/tos_middle_panel_1",
+    "side": "mitrek:blocks/tos_middle_panel_side"
   }
 }

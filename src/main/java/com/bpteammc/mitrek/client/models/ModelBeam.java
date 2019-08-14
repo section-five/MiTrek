@@ -3,22 +3,16 @@ package com.bpteammc.mitrek.client.models;
 //Paste this code into your mod.
 //Copyright UKMinecrafted 2019
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.World;
-import org.lwjgl.opengl.GL11;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 
 public class ModelBeam extends ModelBase {
 	private final ModelRenderer beam;
 
 
-	public ModelBeam(World worldIn, EntityPlayer entityplayer, int damage, DamageSource BEAM, Vec3d vec3d) {
+	public ModelBeam() {
 		textureWidth = 64;
 		textureHeight = 64;
 

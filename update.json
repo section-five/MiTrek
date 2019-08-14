@@ -1,0 +1,15 @@
+{
+  "homepage": "",
+
+  "promos": {
+    "1.12.2-latest": "0.0.4",
+    "1.12.2-recommended": "0.0.3"
+  },
+
+  "1.12.2": {
+    "0.0.1": "Tos Blocks",
+    "0.0.2": "More Tos Blocks",
+    "0.0.3": "Tos Block Fix",
+    "0.0.4": "Tos Block Fix (again)"
+  }
+}

@@ -1,6 +1,5 @@
 package com.bpteammc.mitrek.common.tileentity;
 
-import jdk.nashorn.internal.ir.Block;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;

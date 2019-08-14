@@ -21,7 +21,7 @@ public class BlockShipDoor extends BlockBase implements IHasModel {
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        TileEntityShip ship = (TileEntityShip) worldIn.getTileEntity(ShipHelper.getTardis(pos));
+        TileEntityShip ship = (TileEntityShip) worldIn.getTileEntity(ShipHelper.getShip(pos));
         if (playerIn instanceof EntityPlayerMP) {
             EntityPlayerMP player = (EntityPlayerMP) playerIn;
             worldIn.getMinecraftServer().getPlayerList().transferPlayerToDimension(player, ship.getDimension(), new Teleporter(new BlockPos(pos.getX(), pos.getY(), pos.getZ())));

@@ -9,7 +9,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class ItemPhaser extends Item implements IHasModel {
@@ -17,6 +16,7 @@ public class ItemPhaser extends Item implements IHasModel {
     public ItemPhaser(String name) {
         setTranslationKey(name);
         setRegistryName(name);
+        setMaxStackSize(1);
         setCreativeTab(Mitrek.items);
         setMaxStackSize(1);
 

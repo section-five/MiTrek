@@ -3,7 +3,7 @@ package com.bpteammc.mitrek.util.handlers;
 import com.bpteammc.mitrek.Mitrek;
 import com.bpteammc.mitrek.client.renderers.RenderConstitutionExterior_01;
 import com.bpteammc.mitrek.common.entity.EntityBeam;
-import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
+import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExteriorConstitution;
 import com.bpteammc.mitrek.init.ModBlocks;
 import com.bpteammc.mitrek.init.ModItems;
 import com.bpteammc.mitrek.util.IHasModel;
@@ -19,6 +19,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
 
 @EventBusSubscriber
@@ -52,8 +54,9 @@ public class RegistryHandler {
         GameRegistry.registerTileEntity(clazz, new ResourceLocation(Mitrek.MODID, name));
     }
 
+    @SideOnly(Side.CLIENT)
     public static void preInit() {
-        ClientRegistry.bindTileEntitySpecialRenderer(TileShipExterior_01.class, new RenderConstitutionExterior_01());
+       ClientRegistry.bindTileEntitySpecialRenderer(TileShipExteriorConstitution.class, new RenderConstitutionExterior_01());
     }
 
     public static void addEntities(RegistryEvent.Register<EntityEntry> e) {
