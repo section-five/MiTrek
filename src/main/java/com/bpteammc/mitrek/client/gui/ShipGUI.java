@@ -74,7 +74,7 @@ public class ShipGUI extends GuiScreen {
         ycoord = new GuiTextField(1, fr, x - 40, y + yOffset * 2, 100, fr.FONT_HEIGHT);
         zcoord = new GuiTextField(2, fr, x - 40, y + yOffset * 3 + 1, 100, fr.FONT_HEIGHT);
         warp = new GuiButton(3, x + 11, y + yOffset * 9, warpButton);
-        dim = new GuiTextField(4, fr, x, y, 100, fr.FONT_HEIGHT);
+        dim = new GuiTextField(4, fr, x - 40, y + yOffset * 4 + 3, 100, fr.FONT_HEIGHT);
         warp.x -= warp.width / 2;
         dim.x -= dim.width / 2;
         xcoord.setFocused(true);
@@ -89,6 +89,7 @@ public class ShipGUI extends GuiScreen {
         xcoord.mouseClicked(mouseX, mouseY, mouseButton);
         ycoord.mouseClicked(mouseX, mouseY, mouseButton);
         zcoord.mouseClicked(mouseX, mouseY, mouseButton);
+        dim.mouseClicked(mouseX, mouseY, mouseButton);
         super.mouseClicked(mouseX, mouseY, mouseButton);
     }
 
@@ -108,6 +109,7 @@ public class ShipGUI extends GuiScreen {
         xcoord.drawTextBox();
         ycoord.drawTextBox();
         zcoord.drawTextBox();
+        dim.drawTextBox();
 
 
         super.drawScreen(mouseX, mouseY, partialTicks);
@@ -118,6 +120,7 @@ public class ShipGUI extends GuiScreen {
         xcoord.textboxKeyTyped(typedChar, keyCode);
         ycoord.textboxKeyTyped(typedChar, keyCode);
         zcoord.textboxKeyTyped(typedChar, keyCode);
+        dim.textboxKeyTyped(typedChar, keyCode);
         super.keyTyped(typedChar, keyCode);
     }
 
@@ -126,6 +129,7 @@ public class ShipGUI extends GuiScreen {
         xcoord.updateCursorCounter();
         ycoord.updateCursorCounter();
         zcoord.updateCursorCounter();
+        dim.updateCursorCounter();
         super.updateScreen();
     }
 }
