@@ -37,7 +37,7 @@ public class ModBlocks {
     public static final BlockSlab TOS_FLOOR_SLAB_DOUBLE = new BlockDoubleSlabBase("tos_floor_slab_double", Material.ROCK, ModBlocks.TOS_FLOOR_SLAB_HALF);
     public static final BlockSlab TOS_FLOOR_SLAB_HALF = new BlockHalfSlabBase("tos_floor_slab_half", Material.ROCK, ModBlocks.TOS_FLOOR_SLAB_HALF, ModBlocks.TOS_FLOOR_SLAB_DOUBLE);
     public static final Block TOS_WALL = new BlockBase("tos_wall", Material.ROCK);
-    public static final Block TOS_CAP_CHAIR = new BlockDirectionalBase("tos_cap_chair", Material.CARPET);
+    public static final Block TOS_CAP_CHAIR = new BlockTOSCaptainsChair("tos_cap_chair", Material.CARPET);
     public static final Block TOS_CEILING_1 = new LightBlockBase("tos_ceiling_1", Material.ROCK);
     public static final Block TOS_CEILING_2 = new LightBlockBase("tos_ceiling_2", Material.ROCK);
     public static final Block TOS_CEILING_3 = new LightBlockBase("tos_ceiling_3", Material.ROCK);
