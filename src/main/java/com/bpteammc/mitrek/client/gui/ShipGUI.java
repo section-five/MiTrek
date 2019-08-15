@@ -30,12 +30,12 @@ public class ShipGUI extends GuiScreen {
         fr = mc.fontRenderer;
     }
 
-    public class SmallButton extends GuiButton {
+    public class LargeButton extends GuiButton {
 
-        int BUTTON_WIDTH = 50;
-        int BUTTON_HEIGHT = 60;
+        int BUTTON_WIDTH = 100;
+        int BUTTON_HEIGHT = 120;
 
-        public SmallButton(int buttonId, int x, int y, String buttonText) {
+        public LargeButton(int buttonId, int x, int y, String buttonText) {
             super(buttonId, x, y, buttonText);
         }
 
@@ -75,6 +75,7 @@ public class ShipGUI extends GuiScreen {
         zcoord = new GuiTextField(2, fr, x - 40, y + yOffset * 3 + 1, 100, fr.FONT_HEIGHT);
         warp = new GuiButton(3, x + 11, y + yOffset * 9, warpButton);
         dim = new GuiTextField(4, fr, x - 40, y + yOffset * 4 + 3, 100, fr.FONT_HEIGHT);
+        // TODO fix buttons and send info to ship
         warp.x -= warp.width / 2;
         dim.x -= dim.width / 2;
         xcoord.setFocused(true);
