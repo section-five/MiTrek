@@ -1,10 +1,13 @@
 package com.bpteammc.mitrek.common.tileentity;
 
+import com.bpteammc.mitrek.network.NetworkManager;
+import com.bpteammc.mitrek.network.packets.Warp;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 public class TileEntityShipExterior extends TileEntity implements ITickable {
 
@@ -18,6 +21,25 @@ public class TileEntityShipExterior extends TileEntity implements ITickable {
         this.isRemat = true;
         this.alpha = 0.0f;
     }
+
+    public void setRemat() {
+        this.isRemat = true;
+        this.alpha = 0;
+        sendDematPacket(false);
+    }
+
+    public void setDemat() {
+        this.isDemat = true;
+        this.alpha = 1;
+        sendDematPacket(true);
+    }
+
+    public void sendDematPacket(boolean demat) {
+        if (!world.isRemote)
+            NetworkManager.NETWORK.sendToAllAround(new Warp(this.getPos(), demat), new NetworkRegistry.TargetPoint(this.world.provider.getDimension(), getPos().getX(), getPos().getY(), getPos().getZ(), 64));
+    }
+
+
 
     public float getAlpha() {
         return alpha;
@@ -73,6 +95,9 @@ public class TileEntityShipExterior extends TileEntity implements ITickable {
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
        interiorpos = BlockPos.fromLong(compound.getLong("interiorpos"));
+        this.isDemat = compound.getBoolean("demat");
+        this.isRemat = compound.getBoolean("remat");
+        this.alpha = compound.getFloat("alpha");
     }
 
     @Override
@@ -85,6 +110,9 @@ public class TileEntityShipExterior extends TileEntity implements ITickable {
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);
         compound.setLong("interiorpos", interiorpos.toLong());
+        compound.setBoolean("demat", this.isDemat);
+        compound.setBoolean("remat", this.isRemat);
+        compound.setFloat("alpha", this.alpha);
         return compound;
     }
 }
