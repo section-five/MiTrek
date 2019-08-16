@@ -2,10 +2,12 @@ package com.bpteammc.mitrek.common.blocks;
 
 import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
 import com.bpteammc.mitrek.util.IHasModel;
+import com.bpteammc.mitrek.util.handlers.SoundsHandler;
 import com.bpteammc.mitrek.util.helper.ShipHelper;
 import com.bpteammc.mitrek.util.helper.Teleporter;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.audio.SoundHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.BlockRenderLayer;
@@ -28,6 +30,7 @@ public class BlockShipDoor extends BlockBase implements IHasModel {
             EntityPlayerMP player = (EntityPlayerMP) playerIn;
             worldIn.getMinecraftServer().getPlayerList().transferPlayerToDimension(player, ship.getDimension(), new Teleporter(new BlockPos(pos.getX(), pos.getY(), pos.getZ())));
             player.connection.setPlayerLocation(ship.getExteriorPos().getX() + 1, ship.getExteriorPos().getY(), ship.getExteriorPos().getZ(), 1, 1);
+            playerIn.playSound(SoundsHandler.BEAM_IN, 1, 1);
         }
         return true;
     }

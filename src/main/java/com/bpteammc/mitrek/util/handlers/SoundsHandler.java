@@ -8,9 +8,11 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 public class SoundsHandler {
 
     public static SoundEvent TOS_SHOOT;
+    public static SoundEvent BEAM_IN;
 
     public static void registerSounds() {
         TOS_SHOOT = registerSound("tos_shoot");
+        BEAM_IN = registerSound("beam_in");
     }
 
     private static SoundEvent registerSound(String name) {
