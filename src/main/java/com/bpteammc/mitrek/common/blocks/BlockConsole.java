@@ -24,21 +24,21 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 
 public class BlockConsole extends BlockBase implements ITileEntityProvider, IHasModel {
-    private com.bpteammc.mitrek.network.packets.PacketWarp PacketWarp;
 
     @Override
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (world.isRemote) {
-            TileEntity tileEntity = world.getTileEntity(pos);
-            if (!(tileEntity instanceof TileEntityShip)) {
-                return false;
+            if (!playerIn.isSneaking()) {
+                TileEntity tileEntity = world.getTileEntity(pos);
+                if (!(tileEntity instanceof TileEntityShip)) {
+                    return false;
+                }
+                Minecraft.getMinecraft().displayGuiScreen(new ShipGUI());
+                return true;
             }
-            Minecraft.getMinecraft().displayGuiScreen(new ShipGUI());
-            return true;
         }
         if (playerIn.isSneaking()) {
             if (world.isRemote) {
-                PacketWarp warp = PacketWarp;
             }
         }
         return super.onBlockActivated(world, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);
