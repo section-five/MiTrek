@@ -9,14 +9,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
-public class Warp implements IMessage {
+public class PacketWarp implements IMessage {
 
     public boolean isWarp;
     public BlockPos pos;
 
-    public Warp() {}
+    public PacketWarp() {}
 
-    public Warp(BlockPos pos1, boolean b) {
+    public PacketWarp(BlockPos pos1, boolean b) {
         this.pos = pos1;
         this.isWarp = b;
     }
@@ -33,14 +33,14 @@ public class Warp implements IMessage {
         buf.writeBoolean(isWarp);
     }
 
-    public static class Handler implements IMessageHandler<Warp, IMessage> {
+    public static class Handler implements IMessageHandler<PacketWarp, IMessage> {
 
         public Handler() {
 
         }
 
         @Override
-        public IMessage onMessage(Warp mes, MessageContext ctx) {
+        public IMessage onMessage(PacketWarp mes, MessageContext ctx) {
             Minecraft.getMinecraft().addScheduledTask(() -> {
                 TileEntity te = Minecraft.getMinecraft().world.getTileEntity(mes.pos);
                 if (te != null && te instanceof TileEntityShipExterior) {

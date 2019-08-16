@@ -1,7 +1,7 @@
 package com.bpteammc.mitrek.common.tileentity;
 
 import com.bpteammc.mitrek.network.NetworkManager;
-import com.bpteammc.mitrek.network.packets.Warp;
+import com.bpteammc.mitrek.network.packets.PacketWarp;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
@@ -36,7 +36,7 @@ public class TileEntityShipExterior extends TileEntity implements ITickable {
 
     public void sendDematPacket(boolean demat) {
         if (!world.isRemote)
-            NetworkManager.NETWORK.sendToAllAround(new Warp(this.getPos(), demat), new NetworkRegistry.TargetPoint(this.world.provider.getDimension(), getPos().getX(), getPos().getY(), getPos().getZ(), 64));
+            NetworkManager.NETWORK.sendToAllAround(new PacketWarp(this.getPos(), demat), new NetworkRegistry.TargetPoint(this.world.provider.getDimension(), getPos().getX(), getPos().getY(), getPos().getZ(), 64));
     }
 
 
