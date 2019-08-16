@@ -2,6 +2,7 @@ package com.bpteammc.mitrek.util.handlers;
 
 import com.bpteammc.mitrek.Mitrek;
 import com.bpteammc.mitrek.client.renderers.RenderConstitutionExterior_01;
+import com.bpteammc.mitrek.common.commands.FindShip;
 import com.bpteammc.mitrek.common.entity.EntityBeam;
 import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExteriorConstitution;
 import com.bpteammc.mitrek.init.ModBlocks;
@@ -15,6 +16,7 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
@@ -48,6 +50,10 @@ public class RegistryHandler {
                 ((IHasModel) block).registerModels();
             }
         }
+    }
+
+    public static void serverRegistries(FMLServerStartingEvent event) {
+        event.registerServerCommand(new FindShip());
     }
 
     public static void registerTileEntity(Class<? extends TileEntity> clazz, String name) {
