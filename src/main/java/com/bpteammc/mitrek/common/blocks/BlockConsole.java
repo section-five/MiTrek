@@ -2,7 +2,11 @@ package com.bpteammc.mitrek.common.blocks;
 
 import com.bpteammc.mitrek.client.gui.ShipGUI;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
+import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
+import com.bpteammc.mitrek.network.NetworkManager;
+import com.bpteammc.mitrek.network.packets.PacketWarp;
 import com.bpteammc.mitrek.util.IHasModel;
+import com.jcraft.jogg.Packet;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -20,6 +24,8 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 
 public class BlockConsole extends BlockBase implements ITileEntityProvider, IHasModel {
+    private com.bpteammc.mitrek.network.packets.PacketWarp PacketWarp;
+
     @Override
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if (world.isRemote) {
@@ -30,9 +36,13 @@ public class BlockConsole extends BlockBase implements ITileEntityProvider, IHas
             Minecraft.getMinecraft().displayGuiScreen(new ShipGUI());
             return true;
         }
+        if (playerIn.isSneaking()) {
+            if (world.isRemote) {
+                PacketWarp warp = PacketWarp;
+            }
+        }
         return super.onBlockActivated(world, pos, state, playerIn, hand, facing, hitX, hitY, hitZ);
     }
-
 
     public BlockConsole(String name, Material material) {
         super(name, material);
