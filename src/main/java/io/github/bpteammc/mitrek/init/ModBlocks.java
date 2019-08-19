@@ -47,8 +47,8 @@ public class ModBlocks {
     public static final Block TOS_CEILING_7 = new LightBlockBase("tos_ceiling_7", Material.ROCK);
 
     //TNG BLOCKS
-    public static final Block TNG_LIGHT_BLOCK = new LightBlockBase("tng_light_block", Material.GLASS);
-    public static final Block TNG_TAN_BLOCK = new BlockBase("tng_tan_block", Material.ROCK);
-    public static final Block TNG_SIDE_PANEL/*Server looking block*/ = new BlockBase("tng_side_panel", Material.ROCK);
+    //public static final Block TNG_LIGHT_BLOCK = new LightBlockBase("tng_light_block", Material.GLASS);
+    //public static final Block TNG_TAN_BLOCK = new BlockBase("tng_tan_block", Material.ROCK);
+    //public static final Block TNG_SIDE_PANEL/*Server looking block*/ = new BlockBase("tng_side_panel", Material.ROCK);
     // TODO add Voyager, Deep Space Nine, Enterprise, Discovery blocks and finish adding TNG Blocks
 }
