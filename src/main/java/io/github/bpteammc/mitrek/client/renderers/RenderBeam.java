@@ -3,6 +3,7 @@ package io.github.bpteammc.mitrek.client.renderers;
 import io.github.bpteammc.mitrek.Mitrek;
 import io.github.bpteammc.mitrek.client.models.ModelBeam;
 import io.github.bpteammc.mitrek.common.entity.EntityBeam;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -11,7 +12,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
-public class RenderBeam extends Render<io.github.bpteammc.mitrek.common.entity.EntityBeam> {
+public class RenderBeam extends Render<EntityBeam> {
     private Entity EntityBeam;
 
     public RenderBeam(RenderManager renderManager) {
@@ -29,27 +30,12 @@ public class RenderBeam extends Render<io.github.bpteammc.mitrek.common.entity.E
 
     @Override
     public void doRender(EntityBeam entity, double x, double y, double z, float entityYaw, float partialTicks) {
-
-        GlStateManager.translate(x, y, z);
-
-        Vec3d vec1 = new Vec3d(entity.lastTickPosX, entity.lastTickPosY, entity.lastTickPosZ);
-        Vec3d vec2 = new Vec3d(entity.posX, entity.posY, entity.posZ);
-
-        vec1 = vec2.subtract(vec1);
-        vec2 = vec2.subtract(vec2);
-        vec1 = vec1.normalize();
-
-        double x_ = vec2.x - vec1.x;
-        double y_ = vec2.y - vec1.y;
-        double z_ = vec2.z - vec1.z;
-
-        double diff = MathHelper.sqrt(x_ * x_ + z_ * z_);
-        float yaw = (float) (Math.atan2(z_, x_) * 180.0D / 3.141592653589793D) - 90.0F;
-        float pitch = (float) -(Math.atan2(y_, diff) * 180.0D / 3.141592653589793D);
-
-        GlStateManager.rotate(-yaw, 0.0F, 1.0F, 0.0F);
-        GlStateManager.rotate(pitch, 1.0F, 0.0F, 0.0F);
-
+        GlStateManager.pushMatrix();
+        GlStateManager.translate(x + 0.6, y + 10, z + 0.6);
+        GlStateManager.rotate(180, 1, 0, 0);
+        GlStateManager.scale(7,7,7);
+        Minecraft.getMinecraft().getTextureManager().bindTexture(texture);
+        GlStateManager.popMatrix();
         beam.render(EntityBeam, 0,0,0,0,0,1f);
     }
 
