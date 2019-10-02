@@ -2,7 +2,7 @@
 
 Adds Star Trek to Minecraft.
 
-***We are currently looking for some more modelers and coders to join the team***
+***We are currently looking for some more modelers and coders to join the team, check out [our website](https://bpteammc.github.io/pages/recrutement) for more info***
 ## Getting Started
 
 This is info about the mod!
@@ -31,7 +31,7 @@ and click play and enjoy
 
 ## Contributors
 
-* **None yet be the first
+* **AXL2/Exxl2**
 
 ## License
 
