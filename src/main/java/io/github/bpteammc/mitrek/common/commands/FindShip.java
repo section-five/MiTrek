@@ -1,4 +1,9 @@
-package io.github.bpteammc.mitrek.common.commands;
+/*
+        All code copyright (C) BP Team 2019.
+        All rights reserved.
+        Contact bpteammc@gmail.com for more info
+*/
+/*package io.github.bpteammc.mitrek.common.commands;
 
 import io.github.bpteammc.mitrek.Mitrek;
 import io.github.bpteammc.mitrek.common.ship.data.ShipData;
@@ -55,4 +60,4 @@ public class FindShip extends CommandBase {
     public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos targetPos) {
         return Collections.emptyList();
     }
-}
+}*/

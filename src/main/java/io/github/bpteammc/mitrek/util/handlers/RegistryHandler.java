@@ -1,8 +1,13 @@
+/*
+        All code copyright (C) BP Team 2019.
+        All rights reserved.
+        Contact bpteammc@gmail.com for more info
+*/
 package io.github.bpteammc.mitrek.util.handlers;
 
 import io.github.bpteammc.mitrek.Mitrek;
 import io.github.bpteammc.mitrek.client.renderers.RenderConstitutionExterior_01;
-import io.github.bpteammc.mitrek.common.commands.FindShip;
+//import io.github.bpteammc.mitrek.common.commands.FindShip;
 import io.github.bpteammc.mitrek.common.entity.EntityBeam;
 import io.github.bpteammc.mitrek.common.tileentity.exteriors.TileShipExteriorConstitution;
 import io.github.bpteammc.mitrek.init.ModBlocks;
@@ -52,9 +57,9 @@ public class RegistryHandler {
         }
     }
 
-    public static void serverRegistries(FMLServerStartingEvent event) {
+    /*public static void serverRegistries(FMLServerStartingEvent event) {
         event.registerServerCommand(new FindShip());
-    }
+    }*/
 
     public static void registerTileEntity(Class<? extends TileEntity> clazz, String name) {
         GameRegistry.registerTileEntity(clazz, new ResourceLocation(Mitrek.MODID, name));

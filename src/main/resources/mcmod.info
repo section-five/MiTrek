@@ -5,7 +5,7 @@
   "description": "Adds gear from the Science Fiction TV Show Star Trek",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "https://discord.gg/R6GQ4PU",
+  "url": "https://discord.gg/R6GQ4PU", "https://bpteammc.github.io",
   "authorList": ["§6UKMinecrafted", "§4Ben1Ben1", "§2Josia50", "§3Berenvonbaggins"],
   "credits": "BPTeam",
   "logoFile": "logo.png"
