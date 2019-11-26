@@ -36,7 +36,7 @@ import static xyz.bpteam.mitrek.util.handlers.RegistryHandler.registerTileEntity
 public class Mitrek {
     public static final String MODID = "mitrek";
     public static final String NAME = "MiTrek";
-    public static final String VERSION = "0.0.5";
+    public static final String VERSION = "0.0.6";
     public static final String UPDATEURL = "https://raw.githubusercontent.com/bpteammc/mitrek/master/update.json";
 
     @Mod.Instance
