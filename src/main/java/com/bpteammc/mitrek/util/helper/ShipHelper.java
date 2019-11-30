@@ -1,8 +1,8 @@
 /**
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteammc.com for more info
-**/
+ * All code copyright (C) BP Team 2019.
+ * All rights reserved.
+ * Contact support@bpteammc.com for more info
+ **/
 package com.bpteammc.mitrek.util.helper;
 
 import com.bpteammc.mitrek.Mitrek;
@@ -13,7 +13,9 @@ import com.bpteammc.mitrek.common.world.InteriorGeneration;
 import com.bpteammc.mitrek.init.ModDimensions;
 import com.bpteammc.mitrek.network.NetworkManager;
 import com.bpteammc.mitrek.network.packets.PacketSendShipData;
+import com.bpteammc.mitrek.network.packets.PacketShip;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -50,7 +52,7 @@ public class ShipHelper {
 
         if (ships.containsKey(id)) {
             return ships.get(id);
-        } else{
+        } else {
             ShipData data = ShipSaver.loadShip(id);
             if (data != null) {
                 ships.put(id, data);
@@ -65,7 +67,7 @@ public class ShipHelper {
         ShipData data = getShip(shipId);
 
 
-        if (data == null)  {
+        if (data == null) {
             data = new ShipData(0);
         }
 
@@ -98,7 +100,7 @@ public class ShipHelper {
 
             ShipSaver.addShip(shipId, shipData);
 
-            TileEntityShip ship = (TileEntityShip)  player.world.getTileEntity(pos);
+            TileEntityShip ship = (TileEntityShip) player.world.getTileEntity(pos);
             ship.setShipData(shipData);
             ship.setShipID(shipId);
 
@@ -112,7 +114,7 @@ public class ShipHelper {
         @SubscribeEvent
         public static void sync(LivingEvent.LivingUpdateEvent e) {
             if (e.getEntityLiving().world.getWorldTime() % 200 == 0 && !e.getEntityLiving().world.isRemote && e.getEntityLiving() instanceof EntityPlayer) {
-                //       NetworkManager.NETWORK.sendTo(new PacketShip(), (EntityPlayerMP) e.getEntityLiving());
+                NetworkManager.NETWORK.sendTo(new PacketShip(), (EntityPlayerMP) e.getEntityLiving());
             }
         }
     }
