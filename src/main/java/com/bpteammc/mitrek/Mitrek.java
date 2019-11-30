@@ -5,7 +5,6 @@ import com.bpteammc.mitrek.common.capability.CapabilityShip;
 import com.bpteammc.mitrek.common.capability.IShipCapability;
 import com.bpteammc.mitrek.common.ship.data.ShipSaver;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
-import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
 import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExteriorConstitution;
 import com.bpteammc.mitrek.common.world.InteriorGeneration;
 import com.bpteammc.mitrek.init.ModBlocks;
@@ -77,7 +76,6 @@ public class Mitrek {
         NetworkManager.init();
         ModDimensions.Register();
         registerTileEntity(TileEntityShip.class, "TileShip");
-        registerTileEntity(TileEntityShipExterior.class, "TileShipExterior");
         registerTileEntity(TileShipExteriorConstitution.class, "TileShipExteriorConstitution");
         InteriorGeneration.registerConsoleRoom("shiptest", new BlockPos(16, 1, 16));
         CapabilityManager.INSTANCE.register(IShipCapability.class, new CapShipStorage(), CapabilityShip::new);

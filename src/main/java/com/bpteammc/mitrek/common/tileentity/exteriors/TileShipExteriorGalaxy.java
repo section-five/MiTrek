@@ -5,7 +5,7 @@
 */
 package com.bpteammc.mitrek.common.tileentity.exteriors;
 
-import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
+import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
 
-public class TileShipExteriorGalaxy extends TileEntityShipExterior {
+public class TileShipExteriorGalaxy extends TileEntityShip {
 }
