@@ -1,6 +1,6 @@
 /*package com.bpteammc.mitrek.client.gui;
 
-import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
+import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiTextField;
@@ -21,7 +21,7 @@ public class ShipGUI extends GuiScreen {
 
     @Override
     protected void actionPerformed(GuiButton warp) throws IOException {
-        TileEntityShipExterior ship = (TileEntityShipExterior);
+        TileEntityShip ship = (TileEntityShip);
     }
 }
 */

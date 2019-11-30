@@ -1,6 +1,9 @@
 package com.bpteammc.mitrek.common.blocks;
 
-import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
+import com.bpteammc.mitrek.common.capability.CapShipStorage;
+import com.bpteammc.mitrek.common.capability.IShipCapability;
+import com.bpteammc.mitrek.common.ship.data.ShipData;
+import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
 import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
 import com.bpteammc.mitrek.init.ModDimensions;
 import com.bpteammc.mitrek.util.IHasModel;
@@ -22,7 +25,6 @@ import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -95,13 +97,16 @@ public class BlockShipExterior extends BlockBase implements ITileEntityProvider,
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        if(worldIn.getTileEntity(pos) instanceof TileEntityShipExterior) {
-            TileEntityShipExterior shipExterior = (TileEntityShipExterior) worldIn.getTileEntity(pos);
+        if(worldIn.getTileEntity(pos) instanceof TileEntityShip && !worldIn.isRemote) {
+            TileEntityShip shipExterior = (TileEntityShip) worldIn.getTileEntity(pos);
+            IShipCapability capability = playerIn.getCapability(CapShipStorage.CAPABILITY, null);
+            ShipData data = shipExterior.getShipData();
 
-            if (playerIn instanceof EntityPlayerMP) {
+            if (playerIn instanceof EntityPlayerMP && data != null) {
                 EntityPlayerMP player = (EntityPlayerMP) playerIn;
+                capability.setShipId(shipExterior.getShipID());
                 worldIn.getMinecraftServer().getPlayerList().transferPlayerToDimension(player, ModDimensions.MITREKID, new Teleporter(new BlockPos(pos.getX(), pos.getY(), pos.getZ())));
-                player.connection.setPlayerLocation(shipExterior.getInteriorpos().getX(), shipExterior.getInteriorpos().getY() + 1, shipExterior.getInteriorpos().getZ(), 1, 1);
+                player.connection.setPlayerLocation(data.getInteriorPosition().getX(), data.getInteriorPosition().getY(), data.getInteriorPosition().getZ(), 1, 1);
             }
         }
 
@@ -115,12 +120,14 @@ public class BlockShipExterior extends BlockBase implements ITileEntityProvider,
         if (placer instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) placer;
 
-            if (ShipHelper.hasShip(player.getUniqueID())) {
+
+         /*   if (ShipHelper.hasShip(player.getUniqueID())) {
                 worldIn.setBlockToAir(pos);
                 player.sendStatusMessage(new TextComponentString("You already have a ship!"), true);
-            } else {
-                ShipHelper.makeShip(player, pos);
-            }
+            } else {*/
+         if(!worldIn.isRemote)
+                ShipHelper.makeShip(player, pos, worldIn.provider.getDimension());
+           // }
         }
     }
 }

@@ -1,6 +1,8 @@
 package com.bpteammc.mitrek.common.blocks;
 
-import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
+import com.bpteammc.mitrek.common.capability.CapShipStorage;
+import com.bpteammc.mitrek.common.capability.IShipCapability;
+import com.bpteammc.mitrek.common.ship.data.ShipData;
 import com.bpteammc.mitrek.util.IHasModel;
 import com.bpteammc.mitrek.util.helper.ShipHelper;
 import com.bpteammc.mitrek.util.helper.Teleporter;
@@ -21,11 +23,16 @@ public class BlockShipDoor extends BlockBase implements IHasModel {
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        TileEntityShip ship = (TileEntityShip) worldIn.getTileEntity(ShipHelper.getTardis(pos));
-        if (playerIn instanceof EntityPlayerMP) {
-            EntityPlayerMP player = (EntityPlayerMP) playerIn;
-            worldIn.getMinecraftServer().getPlayerList().transferPlayerToDimension(player, ship.getDimension(), new Teleporter(new BlockPos(pos.getX(), pos.getY(), pos.getZ())));
-            player.connection.setPlayerLocation(ship.getExteriorPos().getX() + 1, ship.getExteriorPos().getY(), ship.getExteriorPos().getZ(), 1, 1);
+        if(!worldIn.isRemote) {
+            IShipCapability capability = playerIn.getCapability(CapShipStorage.CAPABILITY, null);
+            System.out.println(capability.getShipId());
+            ShipData data = ShipHelper.getShip(capability.getShipId());
+
+            if (playerIn instanceof EntityPlayerMP && data != null) {
+                EntityPlayerMP player = (EntityPlayerMP) playerIn;
+                worldIn.getMinecraftServer().getPlayerList().transferPlayerToDimension(player, data.getCurrentDimension(), new Teleporter(new BlockPos(pos.getX(), pos.getY(), pos.getZ())));
+                player.connection.setPlayerLocation(data.getCurrentPosition().getX(), data.getCurrentPosition().getY(), data.getCurrentPosition().getZ(), 1 /* Needs to be exit rotation - 180*/, 1);
+            }
         }
         return true;
     }

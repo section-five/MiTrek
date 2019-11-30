@@ -1,8 +1,10 @@
 package com.bpteammc.mitrek;
 
+import com.bpteammc.mitrek.common.capability.CapShipStorage;
+import com.bpteammc.mitrek.common.capability.CapabilityShip;
+import com.bpteammc.mitrek.common.capability.IShipCapability;
 import com.bpteammc.mitrek.common.ship.data.ShipSaver;
 import com.bpteammc.mitrek.common.tileentity.TileEntityShip;
-import com.bpteammc.mitrek.common.tileentity.TileEntityShipExterior;
 import com.bpteammc.mitrek.common.tileentity.exteriors.TileShipExterior_01;
 import com.bpteammc.mitrek.common.world.InteriorGeneration;
 import com.bpteammc.mitrek.init.ModBlocks;
@@ -16,6 +18,7 @@ import com.google.gson.GsonBuilder;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -71,15 +74,15 @@ public class Mitrek {
         NetworkManager.init();
         ModDimensions.Register();
         registerTileEntity(TileEntityShip.class, "TileShip");
-        registerTileEntity(TileEntityShipExterior.class, "TileShipExterior");
         registerTileEntity(TileShipExterior_01.class, "TileShipExterior_01");
         InteriorGeneration.registerConsoleRoom("shiptest", new BlockPos(16, 1, 16));
+        CapabilityManager.INSTANCE.register(IShipCapability.class, new CapShipStorage(), CapabilityShip::new);
     }
 
     @EventHandler
     public void serverStart(FMLServerStartingEvent e) {
         ShipSaver.ships.clear();
-
+        ShipSaver.mapAllShips();
     }
 
     @EventHandler
