@@ -27,7 +27,6 @@ public class BlockShipDoor extends BlockBase implements IHasModel {
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if(!worldIn.isRemote) {
             IShipCapability capability = playerIn.getCapability(CapShipStorage.CAPABILITY, null);
-            System.out.println(capability.getShipId());
             ShipData data = ShipHelper.getShip(capability.getShipId());
 
             if (playerIn instanceof EntityPlayerMP && data != null) {

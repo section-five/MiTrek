@@ -33,7 +33,6 @@ public class CapabilityShip implements IShipCapability {
 
     @Override
     public void update() {
-        System.out.println(shipID);
     }
 
     @Override
