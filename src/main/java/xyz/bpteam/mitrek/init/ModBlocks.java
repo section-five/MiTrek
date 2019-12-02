@@ -2,11 +2,11 @@ package xyz.bpteam.mitrek.init;
 
 
 import net.minecraft.block.BlockSlab;
-import xyz.bpteam.mitrek.common.blocks.BlockBase;
-import xyz.bpteam.mitrek.common.blocks.BlockShipDoor;
-import xyz.bpteam.mitrek.common.blocks.BlockShipExterior;
+import xyz.bpteam.mitrek.common.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import xyz.bpteam.mitrek.common.blocks.slab.BlockDoubleSlabBase;
+import xyz.bpteam.mitrek.common.blocks.slab.BlockHalfSlabBase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +15,6 @@ public class ModBlocks {
 
     public static final List<Block> BLOCKS = new ArrayList<Block>();
 
-    public class ModBlocks {
-
-        public static final List<Block> BLOCKS = new ArrayList<Block>();
         public static final Block SHIP_EXTERIOR = new BlockShipExterior("ship_exterior", Material.IRON);
         public static final Block SHIP_CONSOLE = new BlockConsole("ship_console", Material.IRON);
         public static final Block STARSHIP_HULL = new BlockBase("starship_hull", Material.ROCK);
