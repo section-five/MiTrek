@@ -1,8 +1,3 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteammc.com for more info
-*/
 package com.bpteammc.mitrek.util.helper;
 
 import com.bpteammc.mitrek.common.damage.IDamageSource;

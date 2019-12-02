@@ -1,8 +1,3 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteammc.com for more info
-*/
 package com.bpteammc.mitrek.proxy;
 
 import com.bpteammc.mitrek.client.renderers.RenderConstitutionExterior_01;
