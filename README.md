@@ -1,4 +1,4 @@
-# MiTrek ![](https://img.shields.io/badge/Creator-UKMinecrafted-orange.svg) ![](https://img.shields.io/badge/Minecraft-1.12.2-blue.svg) ![](https://img.shields.io/badge/Owner-BPTeam-blue.svg) ![](https://img.shields.io/badge/Mod%20Status-WIP-red.svg) ![Discord](https://img.shields.io/discord/538796875311218721.svg?style=plastic)
+# MiTrek ![](https://img.shields.io/badge/Creator-UKMinecrafted-orange.svg) ![](https://img.shields.io/badge/Minecraft-1.15.2-blue.svg) ![](https://img.shields.io/badge/Owner-BPTeam-blue.svg) ![](https://img.shields.io/badge/Mod%20Status-Incomplete-red.svg) ![Discord](https://img.shields.io/discord/538796875311218721.svg?style=plastic)
 
 Adds Star Trek to Minecraft.
 
@@ -6,10 +6,10 @@ Adds Star Trek to Minecraft.
 ## Getting Started
 
 This is info about the mod!
-If you need more help join our [Discord](https://discord.gg/R6GQ4PU)
+If you need more help join our [Discord](https://discord.gg/jqZphQg)
 
 ### Prerequisite
-The Latest Version of [Minecraft  Forge 1.12.2](https://www.minecraftforge.net)
+The Latest Version of [Minecraft  Forge 1.15.2](https://www.minecraftforge.net)
 
 ### Installing
 **NOT OUT YET**
@@ -40,4 +40,4 @@ This project is licensed under the GNU Public Licence 3.0  License - see the [LI
 ## Contact
 You can contact us at the following below
 * bpteammc@gmail.com
-* and on our [Discord](https://discord.gg/R6GQ4PU), @UKMinecrafted
+* and on our [Discord](https://discord.gg/jqZphQg), @UKMinecrafted
