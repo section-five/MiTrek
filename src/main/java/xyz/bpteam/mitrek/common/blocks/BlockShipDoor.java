@@ -1,13 +1,9 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
 package xyz.bpteam.mitrek.common.blocks;
 
-import xyz.bpteam.mitrek.common.tileentity.TileEntityShip;
+import xyz.bpteam.mitrek.common.capability.CapShipStorage;
+import xyz.bpteam.mitrek.common.capability.IShipCapability;
+import xyz.bpteam.mitrek.common.ship.data.ShipData;
 import xyz.bpteam.mitrek.util.IHasModel;
-import xyz.bpteam.mitrek.util.handlers.SoundsHandler;
 import xyz.bpteam.mitrek.util.helper.ShipHelper;
 import xyz.bpteam.mitrek.util.helper.Teleporter;
 import net.minecraft.block.material.Material;
@@ -29,12 +25,15 @@ public class BlockShipDoor extends BlockBase implements IHasModel {
 
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        TileEntityShip ship = (TileEntityShip) worldIn.getTileEntity(ShipHelper.getShip(pos));
-        if (playerIn instanceof EntityPlayerMP) {
-            EntityPlayerMP player = (EntityPlayerMP) playerIn;
-            worldIn.getMinecraftServer().getPlayerList().transferPlayerToDimension(player, ship.getDimension(), new Teleporter(new BlockPos(pos.getX(), pos.getY(), pos.getZ())));
-            player.connection.setPlayerLocation(ship.getExteriorPos().getX() + 1, ship.getExteriorPos().getY(), ship.getExteriorPos().getZ(), 1, 1);
-            playerIn.playSound(SoundsHandler.BEAM_IN, 1, 1);
+        if(!worldIn.isRemote) {
+            IShipCapability capability = playerIn.getCapability(CapShipStorage.CAPABILITY, null);
+            ShipData data = ShipHelper.getShip(capability.getShipId());
+
+            if (playerIn instanceof EntityPlayerMP && data != null) {
+                EntityPlayerMP player = (EntityPlayerMP) playerIn;
+                worldIn.getMinecraftServer().getPlayerList().transferPlayerToDimension(player, data.getCurrentDimension(), new Teleporter(new BlockPos(pos.getX(), pos.getY(), pos.getZ())));
+                player.connection.setPlayerLocation(data.getCurrentPosition().getX(), data.getCurrentPosition().getY(), data.getCurrentPosition().getZ(), 1 /* Needs to be exit rotation - 180*/, 1);
+            }
         }
         return true;
     }

@@ -1,13 +1,8 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
 package xyz.bpteam.mitrek.proxy;
 
 import xyz.bpteam.mitrek.client.renderers.RenderConstitutionExterior_01;
-import xyz.bpteam.mitrek.common.tileentity.exteriors.TileShipExteriorConstitution;
 import xyz.bpteam.mitrek.util.handlers.RegistryHandler;
+import xyz.bpteam.mitrek.common.tileentity.exteriors.TileShipExteriorConstitution;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;

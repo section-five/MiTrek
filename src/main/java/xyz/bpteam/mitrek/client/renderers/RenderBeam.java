@@ -1,12 +1,7 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
 package xyz.bpteam.mitrek.client.renderers;
 
-import xyz.bpteam.mitrek.Mitrek;
 import xyz.bpteam.mitrek.client.models.ModelBeam;
+import xyz.bpteam.mitrek.Mitrek;
 import xyz.bpteam.mitrek.common.entity.EntityBeam;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;

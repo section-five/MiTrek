@@ -1,11 +1,9 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
 package xyz.bpteam.mitrek.init;
 
-import xyz.bpteam.mitrek.common.items.*;
+import xyz.bpteam.mitrek.common.items.ItemCombadge;
+import xyz.bpteam.mitrek.common.items.ItemPhaser;
+import xyz.bpteam.mitrek.common.items.ItemTricorder;
+import xyz.bpteam.mitrek.common.items.WeaponBase;
 import net.minecraft.item.Item;
 
 import java.util.ArrayList;

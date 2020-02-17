@@ -1,13 +1,7 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
 package xyz.bpteam.mitrek.util.handlers;
 
-import xyz.bpteam.mitrek.Mitrek;
 import xyz.bpteam.mitrek.client.renderers.RenderConstitutionExterior_01;
-//import xyz.bpteam.mitrek.common.commands.FindShip;
+import xyz.bpteam.mitrek.Mitrek;
 import xyz.bpteam.mitrek.common.entity.EntityBeam;
 import xyz.bpteam.mitrek.common.tileentity.exteriors.TileShipExteriorConstitution;
 import xyz.bpteam.mitrek.init.ModBlocks;
@@ -28,6 +22,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.registries.IForgeRegistry;
+
+//import com.bpteam.mitrek.common.commands.FindShip;
 
 @EventBusSubscriber
 public class RegistryHandler {

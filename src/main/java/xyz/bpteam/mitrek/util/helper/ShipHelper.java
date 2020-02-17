@@ -1,86 +1,105 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
 package xyz.bpteam.mitrek.util.helper;
 
-import xyz.bpteam.mitrek.Mitrek;
-import xyz.bpteam.mitrek.common.tileentity.TileEntityShip;
 import xyz.bpteam.mitrek.common.world.InteriorGeneration;
-import xyz.bpteam.mitrek.init.ModBlocks;
+import xyz.bpteam.mitrek.Mitrek;
+import xyz.bpteam.mitrek.common.ship.data.ShipData;
+import xyz.bpteam.mitrek.common.ship.data.ShipSaver;
+import xyz.bpteam.mitrek.common.tileentity.TileEntityShip;
 import xyz.bpteam.mitrek.init.ModDimensions;
 import xyz.bpteam.mitrek.network.NetworkManager;
+import xyz.bpteam.mitrek.network.packets.PacketSendShipData;
 import xyz.bpteam.mitrek.network.packets.PacketShip;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3i;
-import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+
+import static xyz.bpteam.mitrek.common.ship.data.ShipSaver.ships;
 
 public class ShipHelper {
     public static int ship_size = 20;
 
-    public static Map<String, BlockPos> ships = new HashMap<>();
 
     public static boolean hasShip(UUID uuid) {
-        return ships.containsKey(uuid.toString());
-    }
-
-    public static BlockPos addShip(UUID uuid) {
-        if (!hasShip(uuid))
-            ships.put(uuid.toString(), getFreeShipLocation().toImmutable());
-        return getFreeShipLocation();
+        return false; // TODO needs a system to check , prob with a for loop
     }
 
     public static BlockPos getFreeShipLocation() {
         if (ships.size() > 0) {
             BlockPos poslast = BlockPos.ORIGIN;
-            for (BlockPos pos : ships.values().toArray(new BlockPos[]{})) {
+            for (ShipData data : ships.values()) {
+                BlockPos pos = data.getInitPos();
+
                 if (pos.getX() > poslast.getX() && pos.getZ() > poslast.getZ())
                     poslast = pos;
             }
-            System.out.println("wtf");
             return poslast.add(ship_size * 20, 0, ship_size * 20);
         }
         return new BlockPos(1, 100, 1);
     }
-//Changed to getShip from getTardis
-    public static BlockPos getShip(Vec3i vec3i) {
-        for (BlockPos pos : ships.values()) {
-         //   System.out.println(pos.getDistance(vec3i.getX(), vec3i.getY(), vec3i.getZ()) < (ship_size * ship_size) / 2);
-            System.out.println(pos);
-            if (pos.getDistance(vec3i.getX(), vec3i.getY(), vec3i.getZ()) < (ship_size * ship_size) / 2) { //(ship_size * ship_size) / 2
 
-                return pos;
+    public static ShipData getShip(int id) {
+
+        if (ships.containsKey(id)) {
+            return ships.get(id);
+        } else {
+            ShipData data = ShipSaver.loadShip(id);
+            if (data != null) {
+                ships.put(id, data);
+                return data;
+            } else {
+                return ships.get(0);
             }
         }
-        return BlockPos.ORIGIN;
     }
 
-    public static void makeShip(EntityPlayer player, BlockPos pos) {
+    public static ShipData getServerData(int shipId, BlockPos pos) {
+        ShipData data = getShip(shipId);
+
+
+        if (data == null) {
+            data = new ShipData(0);
+        }
+
+
+        if (data != null) {
+            NetworkManager.NETWORK.sendToAll(new PacketSendShipData(data, pos));
+        }
+
+
+        return data;
+    }
+
+    public static void makeShip(EntityPlayer player, BlockPos pos, int dim) {
         if (!player.world.isRemote) {
-            BlockPos position = addShip(player.getUniqueID());
-            WorldServer worldServer = player.world.getMinecraftServer().getWorld(ModDimensions.MITREKID);
-            if (position != null && worldServer != null) {
-                TileEntity te = worldServer.getTileEntity(position);
-                if (te == null || !(te instanceof TileEntityShip)) {
-                    InteriorGeneration.INTERIOR_LIST.get(0).generate((player.world).getMinecraftServer().getWorld(ModDimensions.MITREKID), position);
-                    worldServer.setBlockState(position, ModBlocks.SHIP_CONSOLE.getDefaultState()); // TODO Get Sub Blocks
-                    TileEntityShip ship = (TileEntityShip) worldServer.getTileEntity(position);
-                    ship.setDestination(pos, player.world.provider.getDimension());
-                    ship.setIsinFlight(true);
-                    ship.spawnFirst();
-                }
+            int lastID = 0;
+
+
+            for (Map.Entry<Integer, ShipData> list : ships.entrySet()) {
+                lastID = list.getKey();
             }
+
+            int shipId = lastID + 1;
+            ShipData shipData = new ShipData(shipId);
+
+            shipData.setCurrentPosition(pos);
+            shipData.setCurrentDimension(dim);
+            BlockPos poso = getFreeShipLocation();
+            shipData.setInteriorPosition(poso);
+            shipData.setInitPos(poso);
+
+            ShipSaver.addShip(shipId, shipData);
+
+            TileEntityShip ship = (TileEntityShip) player.world.getTileEntity(pos);
+            ship.setShipData(shipData);
+            ship.setShipID(shipId);
+
+            InteriorGeneration.INTERIOR_LIST.get(0).generate(player.world.getMinecraftServer().getWorld(ModDimensions.MITREKID), poso);
         }
     }
 

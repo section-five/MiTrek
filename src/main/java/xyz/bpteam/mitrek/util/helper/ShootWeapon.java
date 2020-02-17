@@ -1,14 +1,9 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
 package xyz.bpteam.mitrek.util.helper;
 
+import xyz.bpteam.mitrek.util.handlers.SoundsHandler;
 import xyz.bpteam.mitrek.common.damage.IDamageSource;
 import xyz.bpteam.mitrek.common.entity.EntityBeam;
 import xyz.bpteam.mitrek.init.ModItems;
-import xyz.bpteam.mitrek.util.handlers.SoundsHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Vec3d;

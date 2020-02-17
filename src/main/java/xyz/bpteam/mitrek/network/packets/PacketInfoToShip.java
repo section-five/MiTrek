@@ -1,8 +1,3 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
 package xyz.bpteam.mitrek.network.packets;
 
 import io.netty.buffer.ByteBuf;

@@ -1,10 +1,6 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
 package xyz.bpteam.mitrek.util;
 
+// TODO Please for professional sake remove this and replace
 public interface IHasModel
 {
     void registerModels();

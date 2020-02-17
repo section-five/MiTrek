@@ -1,14 +1,10 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
 package xyz.bpteam.mitrek.init;
 
 import xyz.bpteam.mitrek.common.world.WorldProviderMitrek;
-//import xyz.bpteam.mitrek.common.world.WorldProviderVulcan;
 import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.DimensionManager;
+
+//import xyz.bpteam.mitrek.common.world.WorldProviderVulcan;
 
 public class ModDimensions {
 

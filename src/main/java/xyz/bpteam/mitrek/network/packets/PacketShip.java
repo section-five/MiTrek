@@ -1,14 +1,10 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
 package xyz.bpteam.mitrek.network.packets;
 
-import xyz.bpteam.mitrek.util.helper.ShipHelper;
+import xyz.bpteam.mitrek.Mitrek;
+import xyz.bpteam.mitrek.common.ship.data.ShipData;
+import xyz.bpteam.mitrek.common.ship.data.ShipSaver;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
-import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
@@ -19,25 +15,32 @@ import java.util.Map;
 
 public class PacketShip implements IMessage {
 
-    public Map<String, BlockPos> map = new HashMap<String, BlockPos>();
+    public Map<Integer, ShipData> map = new HashMap<>();
 
     public PacketShip() {
     }
+
+    public PacketShip(Map<Integer, ShipData> map) {
+        this.map = map;
+    }
+
 
     @Override
     public void fromBytes(ByteBuf buf) {
         int sizes = buf.readInt();
         for (int i = 0; i < sizes; i++) {
-            map.put(ByteBufUtils.readUTF8String(buf), BlockPos.fromLong(buf.readLong()));
+            int id = buf.readInt();
+            ShipData data = Mitrek.GSON.fromJson(ByteBufUtils.readUTF8String(buf), ShipData.class);
+            map.put(id, data);
         }
     }
 
     @Override
     public void toBytes(ByteBuf buf) {
-        buf.writeInt(ShipHelper.ships.size());
-        for (String key : ShipHelper.ships.keySet()) {
-            ByteBufUtils.writeUTF8String(buf, key);
-            buf.writeLong(ShipHelper.ships.get(key).toLong());
+        buf.writeInt(ShipSaver.ships.size());
+        for (Map.Entry<Integer, ShipData> map : ShipSaver.ships.entrySet()) {
+            buf.writeInt(map.getKey());
+            ByteBufUtils.writeUTF8String(buf, Mitrek.GSON.toJson(map.getValue()));
         }
     }
 
@@ -48,8 +51,8 @@ public class PacketShip implements IMessage {
             Minecraft.getMinecraft().addScheduledTask(new Runnable() {
                 @Override
                 public void run() {
-                    ShipHelper.ships.clear();
-                    ShipHelper.ships.putAll(message.map);
+                    ShipSaver.ships.clear();
+                    ShipSaver.ships.putAll(message.map);
                 }
             });
             return null;

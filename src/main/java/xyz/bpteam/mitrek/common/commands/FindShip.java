@@ -1,12 +1,7 @@
-/*
-        All code copyright (C) BP Team 2019.
-        All rights reserved.
-        Contact support@bpteam.xyz for more info
-*/
-/*package xyz.bpteam.mitrek.common.commands;
+/*package com.bpteam.mitrek.common.commands;
 
-import xyz.bpteam.mitrek.Mitrek;
-import xyz.bpteam.mitrek.common.ship.data.ShipData;
+import com.bpteam.mitrek.Mitrek;
+import com.bpteam.mitrek.common.ship.data.ShipData;
 import com.google.common.collect.Lists;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
