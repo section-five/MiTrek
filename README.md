@@ -6,7 +6,7 @@ Adds Star Trek to Minecraft.
 ## Getting Started
 
 This is info about the mod!
-If you need more help join our [Discord](https://discord.gg/R6GQ4PU)
+If you need more help join our [Discord](https://discord.gg/Zawfp6K)
 
 ### Prerequisite
 The Latest Version of [Minecraft  Forge 1.12.2](https://www.minecraftforge.net)
@@ -39,5 +39,5 @@ This project is licensed under the GNU Public Licence 3.0  License - see the [LI
 
 ## Contact
 You can contact us at the following below
-* bpteammc@gmail.com
-* and on our [Discord](https://discord.gg/R6GQ4PU), @UKMinecrafted
+* bp@bpteam.xyz
+* and on our [Discord](https://discord.gg/Zawfp6K), @UKMinecrafted
