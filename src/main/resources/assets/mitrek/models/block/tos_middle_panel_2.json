@@ -1,8 +1,0 @@
-{
-  "parent": "block/orientable",
-  "textures": {
-    "top": "mitrek:blocks/tos_middle_panel_side",
-    "front": "mitrek:blocks/tos_middle_panel_2",
-    "side": "mitrek:blocks/tos_middle_panel_side"
-  }
-}

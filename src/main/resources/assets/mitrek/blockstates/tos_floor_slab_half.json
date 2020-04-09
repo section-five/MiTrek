@@ -1,8 +1,0 @@
-
-{
-  "variants":
-  {
-    "half=bottom,variant=default": { "model": "mitrek:tos_floor_slab_bottom" },
-    "half=top,variant=default": { "model": "mitrek:tos_floor_slab_top" }
-  }
-}

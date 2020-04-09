@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "mitrek:blocks/tos_lower_panel_1"
+    "all": "mitrek:block/dilithium_block"
   }
 }

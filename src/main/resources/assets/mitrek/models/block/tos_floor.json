@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "mitrek:blocks/tos_floor",
-    "side": "mitrek:blocks/tos_floor_side"
-  }
-}

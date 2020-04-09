@@ -1,9 +1,0 @@
-{
-  "parent": "block/upper_slab",
-  "textures":
-  {
-    "bottom": "mitrek:blocks/tos_wall",
-    "top": "tutorial:blocks/tos_wall",
-    "side": "tutorial:blocks/tos_wall"
-  }
-}
