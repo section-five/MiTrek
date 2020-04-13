@@ -5,7 +5,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import xyz.bpteam.mitrek.MiTrek;
-import xyz.bpteam.mitrek.common.items.ItemBase;
+import xyz.bpteam.mitrek.items.ItemBase;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, MiTrek.MODID);

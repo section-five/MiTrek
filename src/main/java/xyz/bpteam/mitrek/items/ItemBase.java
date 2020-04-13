@@ -1,4 +1,4 @@
-package xyz.bpteam.mitrek.common.items;
+package xyz.bpteam.mitrek.items;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
