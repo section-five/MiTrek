@@ -1,19 +1,19 @@
-# MiTrek ![](https://img.shields.io/badge/Minecraft-1.15.2-blue.svg) ![](https://img.shields.io/badge/Latest%20Version-0.1-blue.svg) ![](https://img.shields.io/badge/Mod%20Status-Incomplete-red.svg) ![Discord](https://img.shields.io/discord/538796875311218721.svg?style=plastic) ![Gradle Build](https://github.com/UKMinecrafted/MiTrek/workflows/Gradle%20Build/badge.svg?branch=1.15.2)
+# MiTrek ![](https://img.shields.io/badge/Minecraft-1.15.2-blue.svg) ![](https://img.shields.io/badge/Latest%20Version-0.1-blue.svg) ![](https://img.shields.io/badge/Mod%20Status-Incomplete-red.svg) ![Discord](https://img.shields.io/discord/538796875311218721) ![Gradle Build](https://github.com/UKMinecrafted/MiTrek/workflows/Gradle%20Build/badge.svg?branch=1.15.2)
 
 Adds Star Trek to Minecraft.
 
 ## Getting Started
 
 This is info about the mod!
-If you need more help join our [Discord](https://discord.gg/jqZphQg)
+If you need more help join our [Discord](https://discord.gg/Zawfp6K)
 
 ### Prerequisite
-The Latest Version of [Minecraft  Forge 1.15.2](https://www.minecraftforge.net)
+The Latest Version of [Minecraft Forge 1.15.2](https://www.minecraftforge.net)
 
 ### Installing
 **NOT OUT YET**
 
-Download the 1.15.2 version of the Mod from the source [Here (awaiting link from release)](https://minecraft.curseforge.com/projects/...)
+Download the 1.15.2 version of the Mod from the source [Here](https://www.curseforge.com/minecraft/mc-mods/mitrek)
 
 Move the mod into the mod folder in your .minecraft folder
 
@@ -39,4 +39,4 @@ This project is licensed under the GNU Public Licence 3.0  License - see the [LI
 ## Contact
 You can contact us at the following below
 * support@bpteam.xyz
-* and on our [Discord](https://discord.gg/jqZphQg), @UKMinecrafted
+* and on our [Discord](https://discord.gg/Zawfp6K), @UKMinecrafted
