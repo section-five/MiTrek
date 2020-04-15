@@ -4,7 +4,8 @@
 name: Gradle Build
 
 on:
-  [push, pull_request]
+  pull_request:
+    types: [opened, reopened, review_requested]
 
 jobs:
   build:
