@@ -10,4 +10,5 @@ import xyz.bpteam.mitrek.items.ItemBase;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, MiTrek.MODID);
     public static final RegistryObject<Item> DILITHIUM_CRYSTAL = ITEMS.register("dilithium_crystal", ItemBase::new);
+    public static final RegistryObject<Item> DURITANIUM_ALLOY = ITEMS.register("duritanium_alloy", ItemBase::new);
 }
