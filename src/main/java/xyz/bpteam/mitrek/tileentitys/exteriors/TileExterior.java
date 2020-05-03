@@ -8,7 +8,7 @@ public class TileExterior extends TileEntity {
 
     private int shipID = 0;
     private boolean inwarp = false;
-    private int warppeed = 0;
+    private int warpspeed = 0;
     private boolean shiplocked = false;
     private String ownername;
     private String ownerUUID;
@@ -28,6 +28,50 @@ public class TileExterior extends TileEntity {
         super(p_i48289_1_);
     }
 
+    public int getShipID() {
+        return shipID;
+    }
+
+    public boolean isInwarp() {
+        return inwarp;
+    }
+
+    public int getWarpspeed() {
+        return warpspeed;
+    }
+
+    public boolean isShiplocked() {
+        return shiplocked;
+    }
+
+    public String getOwnername() {
+        return ownername;
+    }
+
+    public String getOwnerUUID() {
+        return ownerUUID;
+    }
+
+    public BlockPos getCurrentPos() {
+        return currentPos;
+    }
+
+    public BlockPos getDestinationPos() {
+        return destinationPos;
+    }
+
+    public BlockPos getInteriorPos() {
+        return interiorPos;
+    }
+
+    public int getCurrentDim() {
+        return currentDim;
+    }
+
+    public int getDestinationDim() {
+        return destinationDim;
+    }
+
     public void setOwnername(String ownername) {
         this.ownername = ownername;
     }
@@ -35,4 +79,14 @@ public class TileExterior extends TileEntity {
     public void setOwnerUUID(String ownerUUID) {
         this.ownerUUID = ownerUUID;
     }
+
+    public void setCurrentPos(BlockPos currentPos) {
+        this.currentPos = currentPos;
+    }
+
+    public void setCurrentDim(int destinationDim) {
+        this.destinationDim = destinationDim;
+    }
+
+
 }

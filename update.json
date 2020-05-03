@@ -2,15 +2,11 @@
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/mitrek",
 
   "promos": {
-    "1.12.2-latest": "0.0.5",
-    "1.12.2-recommended": "0.0.5"
+    "1.15.2-latest": "0.1",
+    "1.15.2-recommended": "0.1"
   },
 
   "1.12.2": {
-    "0.0.1": "Tos Blocks",
-    "0.0.2": "More Tos Blocks",
-    "0.0.3": "Tos Block Fix",
-    "0.0.4": "Tos Block Fix (again)",
-    "0.0.5": "Adds berens console",
+    "0.1": ""
   }
 }

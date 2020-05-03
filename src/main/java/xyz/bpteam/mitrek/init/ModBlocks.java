@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 import xyz.bpteam.mitrek.MiTrek;
 
+
 @Mod.EventBusSubscriber(bus= Mod.EventBusSubscriber.Bus.MOD)
 public class  ModBlocks {
 
@@ -23,7 +24,7 @@ public class  ModBlocks {
     public static final RegistryObject<Block> DURITANIUM_BLOCK = BLOCKS.register("light_block", () -> new Block(Block.Properties.create(Material.IRON)));
     public static final RegistryObject<Block> DURITANIUM_ORE = BLOCKS.register("duritanium_ore", () -> new Block(Block.Properties.create(Material.EARTH)));
     public static final RegistryObject<Block> TOS_WARP_CORE = BLOCKS.register("tos_warp_core", () -> new Block(Block.Properties.create(Material.BARRIER)));
-    
+
     @SubscribeEvent
     public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();
