@@ -16,8 +16,9 @@ import java.util.function.Supplier;
         @Nonnull
         private final Supplier <ItemStack> iconSupplier;
 
-        public ModItemGroup(String label, Supplier<ItemStack> iconSupplier) {
+        public ModItemGroup(String label) {
             super(label);
+            this.iconSupplier = iconSupplier1;
         }
 
         @Override
