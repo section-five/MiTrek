@@ -2,28 +2,20 @@ package xyz.bpteam.mitrek.init;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import xyz.bpteam.mitrek.MiTrek;
 
-import javax.annotation.Nonnull;
-import java.util.function.Supplier;
+public final class ModItemGroups {
 
-/*public class ModItemGroups {
-
-    public static final ItemGroup MITREK_BLOCKS = new ModItemGroup(MiTrek.MODID), () ->
-
-    public static final class ModItemGroup extends ItemGroup {
-
-        @Nonnull
-        private final Supplier <ItemStack> iconSupplier;
-
-        public ModItemGroup(String label) {
-            super(label);
-            this.iconSupplier = iconSupplier1;
-        }
-
-        @Override
-        public ItemStack createIcon() {
-            return null;
-        }
+  public static final ItemGroup MITREK_BLOCKS = new ItemGroup("mitrek_blocks") {
+    @Override
+    public ItemStack createIcon() {
+      return new ItemStack(ModBlocks.DILITHIUM_BLOCK.get().asItem());
     }
-}*/
+  };
+
+  public static final ItemGroup MITREK_ITEMS = new ItemGroup("mitrek_items") {
+    @Override
+    public ItemStack createIcon() {
+      return new ItemStack(ModItems.DURITANIUM_ALLOY.get().asItem());
+    }
+  };
+}

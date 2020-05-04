@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
@@ -29,7 +28,7 @@ public class  ModBlocks {
     public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();
         BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            registry.register(new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
+            registry.register(new BlockItem(block, new Item.Properties().group(ModItemGroups.MITREK_ITEM)).setRegistryName(block.getRegistryName()));
         });
     }
 }
