@@ -48,12 +48,24 @@ public class TileExterior extends TileEntity {
         return ownername;
     }
 
+    public void setOwnername(String ownername) {
+        this.ownername = ownername;
+    }
+
     public String getOwnerUUID() {
         return ownerUUID;
     }
 
+    public void setOwnerUUID(String ownerUUID) {
+        this.ownerUUID = ownerUUID;
+    }
+
     public BlockPos getCurrentPos() {
         return currentPos;
+    }
+
+    public void setCurrentPos(BlockPos currentPos) {
+        this.currentPos = currentPos;
     }
 
     public BlockPos getDestinationPos() {
@@ -68,24 +80,12 @@ public class TileExterior extends TileEntity {
         return currentDim;
     }
 
-    public int getDestinationDim() {
-        return destinationDim;
-    }
-
-    public void setOwnername(String ownername) {
-        this.ownername = ownername;
-    }
-
-    public void setOwnerUUID(String ownerUUID) {
-        this.ownerUUID = ownerUUID;
-    }
-
-    public void setCurrentPos(BlockPos currentPos) {
-        this.currentPos = currentPos;
-    }
-
     public void setCurrentDim(int destinationDim) {
         this.destinationDim = destinationDim;
+    }
+
+    public int getDestinationDim() {
+        return destinationDim;
     }
 
 

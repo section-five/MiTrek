@@ -13,8 +13,7 @@ import xyz.bpteam.mitrek.init.ModItems;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("mitrek")
-public class MiTrek
-{
+public class MiTrek {
     public static final String MODID = "mitrek";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
@@ -26,6 +25,7 @@ public class MiTrek
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
+
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {

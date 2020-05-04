@@ -14,8 +14,8 @@ import net.minecraftforge.registries.IForgeRegistry;
 import xyz.bpteam.mitrek.MiTrek;
 
 
-@Mod.EventBusSubscriber(bus= Mod.EventBusSubscriber.Bus.MOD)
-public class  ModBlocks {
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, MiTrek.MODID);
     public static final RegistryObject<Block> DILITHIUM_BLOCK = BLOCKS.register("dilithium_block", () -> new Block(Block.Properties.create(Material.IRON)));
