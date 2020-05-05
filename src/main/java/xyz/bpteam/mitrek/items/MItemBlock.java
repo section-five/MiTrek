@@ -1,16 +1,19 @@
 package xyz.bpteam.mitrek.items;
 
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import xyz.bpteam.mitrek.init.ModItemGroups;
+import net.minecraft.item.ItemGroup;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemBase extends Item {
+public class MItemBlock extends BlockItem {
+
     public List<ItemGroup> groups;
 
-    public ItemBase() {
-        super(new Properties().group(ModItemGroups.MITREK_ITEMS));
+    public MItemBlock(Block blockIn) {
+        super(blockIn, new Item.Properties());
     }
 
     public Item setGroup(ItemGroup... groups) {

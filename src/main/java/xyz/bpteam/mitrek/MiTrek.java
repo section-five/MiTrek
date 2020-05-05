@@ -1,5 +1,8 @@
 package xyz.bpteam.mitrek;
 
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -15,20 +18,39 @@ import xyz.bpteam.mitrek.init.ModItems;
 @Mod("mitrek")
 public class MiTrek {
     public static final String MODID = "mitrek";
-    // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
     public MiTrek() {
         final IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        ModBlocks.BLOCKS.register(eventBus);
-        ModItems.ITEMS.register(eventBus);
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
+
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
 
+    }
+
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class RegistryEvents {
+
+        @SubscribeEvent
+        public static void registerItems(final RegistryEvent.Register<Item> event) {
+            LOGGER.info("Registering Items");
+
+            for (Item item : ModItems.ITEMS) {
+                event.getRegistry().register(item);
+            }
+        }
+
+        @SubscribeEvent
+        public static void registerBlocks(final RegistryEvent.Register<Block> event) {
+            LOGGER.info("Registering Blocks");
+
+            for (Block block : ModBlocks.BLOCKS) {
+                event.getRegistry().register(block);
+            }
+        }
     }
 }
