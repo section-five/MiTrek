@@ -1,7 +1,7 @@
 package xyz.bpteam.mitrek.items;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import xyz.bpteam.mitrek.init.ModItemGroups;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ public class ItemBase extends Item {
     public List<ItemGroup> groups;
 
     public ItemBase() {
-        super(new Properties().group(ItemGroup.BUILDING_BLOCKS));
+        super(new Properties().group(ModItemGroups.MITREK_ITEMS));
     }
 
     public Item setGroup(ItemGroup... groups) {

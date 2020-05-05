@@ -2,8 +2,8 @@ package xyz.bpteam.mitrek;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -25,6 +25,7 @@ public class MiTrek {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
+    // You can use SubscribeEvent and let the Event Bus discover methods to call
 
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
