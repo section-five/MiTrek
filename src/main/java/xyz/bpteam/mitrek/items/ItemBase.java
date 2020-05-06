@@ -1,6 +1,7 @@
 package xyz.bpteam.mitrek.items;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import xyz.bpteam.mitrek.init.ModItemGroups;
 
 import java.util.ArrayList;
