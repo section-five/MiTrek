@@ -22,10 +22,15 @@ public class ModBlocks {
   
     public static final List<Block> BLOCKS = new ArrayList<>();
     public static final Block DILITHIUM_BLOCK = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "dilithium_block").setGroup(ModItemGroups.MITREK_BLOCKS);
+    public static final Block DURANIUM_BLOCK = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "duranium_block").setGroup(ModItemGroups.MITREK_BLOCKS);
+    public static final Block TRITANIUM_BLOCK = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "tritanium_block").setGroup(ModItemGroups.MITREK_BLOCKS);
     public static final Block DILITHIUM_ORE = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "dilithium_ore").setGroup(ModItemGroups.MITREK_BLOCKS);
-    //public static final RegistryObject<Block> DURITANIUM_BLOCK = BLOCKS.register("light_block", () -> new Block(Block.Properties.create(Material.IRON)));
-    //public static final RegistryObject<Block> DURITANIUM_ORE = BLOCKS.register("duritanium_ore", () -> new Block(Block.Properties.create(Material.EARTH)));
-    //public static final RegistryObject<Block> TOS_WARP_CORE = BLOCKS.register("tos_warp_core", () -> new Block(Block.Properties.create(Material.BARRIER)));
+    public static final Block DURANIUM_ORE = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "duranium_ore").setGroup(ModItemGroups.MITREK_BLOCKS);
+    public static final Block MAGNESITE_ORE = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "magnesite_ore").setGroup(ModItemGroups.MITREK_BLOCKS);
+    public static final Block VICTURIUM_ORE = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "victurium_ore").setGroup(ModItemGroups.MITREK_BLOCKS);
+    public static final Block TRITANIUM_ORE = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "tritanium_ore").setGroup(ModItemGroups.MITREK_BLOCKS);
+    public static final Block POLYDURANIDE_ORE = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "polyduranide_ore").setGroup(ModItemGroups.MITREK_BLOCKS);
+
 
     public static BlockBase registerBlock(BlockBase base, String name) {
         base.setRegistryName(name);
