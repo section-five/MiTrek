@@ -14,7 +14,14 @@ import java.util.List;
 public class ModItems {
     public static final List<Item> ITEMS = new ArrayList<>();
 
-    public static final Item DILITHIUM_CRYSTAL = registerItem(new ItemBase(), "dilithium_crystal").setGroup(ItemGroup.MISC);
+    //resources
+    public static final Item DURANIUM_INGOT = registerItem(new ItemBase(), "duranium_ingot").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item MAGNESITE_CRYSTAL = registerItem(new ItemBase(), "magnesite_crystal").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item ELECTROCERAMICS = registerItem(new ItemBase(), "electroceramics").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item VICTURIUM_INGOT = registerItem(new ItemBase(), "victurium_ingot").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item TRITANIUM_INGOT = registerItem(new ItemBase(), "tritanium_ingot").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item COPPER_INGOT = registerItem(new ItemBase(), "copper_ingot").setGroup(ModItemGroups.MITREK_ITEMS);
+
 
     public static <T extends Item> T registerItem(T item, String name) {
         item.setRegistryName(name);
