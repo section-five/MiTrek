@@ -17,7 +17,7 @@ public class ItemBase extends Item {
     public Item setGroup(ItemGroup... groups) {
         this.groups = new ArrayList<>();
 
-        for(ItemGroup group : groups) {
+        for (ItemGroup group : groups) {
             this.groups.add(group);
         }
 
@@ -26,7 +26,8 @@ public class ItemBase extends Item {
 
     @Override
     protected boolean isInGroup(ItemGroup group) {
-        if (getCreativeTabs().stream().anyMatch(tab -> tab == group) || (groups != null && groups.contains(group))) return true;
+        if (getCreativeTabs().stream().anyMatch(tab -> tab == group) || (groups != null && groups.contains(group)))
+            return true;
 
         ItemGroup itemgroup = this.getGroup();
         return itemgroup != null && (group == ItemGroup.SEARCH || group == itemgroup);

@@ -1,7 +1,5 @@
 package xyz.bpteam.mitrek.world.dim;
 
-import net.minecraft.client.audio.MusicTicker;
-import net.minecraft.client.gui.screen.DeathScreen;
 import net.minecraft.client.renderer.Vector3f;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -13,9 +11,7 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.dimension.Dimension;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.eventbus.api.Event;
 
 import javax.annotation.Nullable;
 
