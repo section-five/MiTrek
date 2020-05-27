@@ -1,5 +1,7 @@
 {
   "block.mitrek.dilithium_block": "Dilithium Block",
   "block.mitrek.dilithium_ore": "Dilithium Ore",
-  "block,mitrek.dilithium_crystal": "Dilithium Crystal"
+  "block.mitrek.dilithium_crystal": "Dilithium Crystal",
+
+  "item.mitrek.copper_ingot": "Copper Ingot"
 }
