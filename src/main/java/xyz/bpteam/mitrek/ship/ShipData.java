@@ -1,14 +1,12 @@
 package xyz.bpteam.mitrek.ship;
 
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
-
-import java.util.UUID;
 
 public class ShipData {
     private boolean inwarp = false;
     private int warpspeed = 0;
     private boolean shiplocked = false;
+    private int shipID = 0;
 
     //exterior info
     private BlockPos currentPos;
@@ -61,5 +59,9 @@ public class ShipData {
 
     public int getDestinationDim() {
         return destinationDim;
+    }
+
+    public int getShipID() {
+        return shipID;
     }
 }

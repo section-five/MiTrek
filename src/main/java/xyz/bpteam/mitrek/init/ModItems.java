@@ -1,11 +1,6 @@
 package xyz.bpteam.mitrek.init;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import xyz.bpteam.mitrek.MiTrek;
 import xyz.bpteam.mitrek.items.ItemBase;
 
 import java.util.ArrayList;
