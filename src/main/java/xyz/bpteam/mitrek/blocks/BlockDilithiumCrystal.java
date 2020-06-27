@@ -3,12 +3,22 @@ package xyz.bpteam.mitrek.blocks;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.math.shapes.*;
 import net.minecraft.world.IBlockReader;
 
 public class BlockDilithiumCrystal extends BlockBase {
+<<<<<<< Updated upstream
+=======
+
+    public static final VoxelShape getVoxelShape() {
+        VoxelShape voxelShape = VoxelShapes.create(0.31, 0.06, 0, 0.56, 0.75, 0.25);
+        voxelShape = VoxelShapes.combineAndSimplify(voxelShape, VoxelShapes.create(0.68, 0, 0.35, 0.93, 0.68, 0.62), IBooleanFunction.OR);
+        voxelShape = VoxelShapes.combineAndSimplify(voxelShape, VoxelShapes.create(0, 0.06, 0.43, 0.25, 0.87, 0.68), IBooleanFunction.OR);
+        voxelShape = VoxelShapes.combineAndSimplify(voxelShape, VoxelShapes.create(0.45, 0, 0.68, 0.68, 0.35, 0.93), IBooleanFunction.OR);
+        return voxelShape;
+    };
+
+>>>>>>> Stashed changes
     public BlockDilithiumCrystal(Properties properties) {
         super(properties);
     }
@@ -22,12 +32,12 @@ public class BlockDilithiumCrystal extends BlockBase {
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-        return DILITHIUM_CRYSTAL;
+        return getVoxelShape();
     }
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-        return DILITHIUM_CRYSTAL;
+        return getVoxelShape();
     }
 
 

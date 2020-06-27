@@ -1,8 +1,9 @@
 package xyz.bpteam.mitrek;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,7 +20,9 @@ import xyz.bpteam.mitrek.init.ModItems;
 @Mod("mitrek")
 public class MiTrek {
     public static final String MODID = "mitrek";
+    public static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final Logger LOGGER = LogManager.getLogger();
+    public static MiTrek instance;
 
     public MiTrek() {
         final IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
