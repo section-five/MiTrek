@@ -7,9 +7,6 @@ import net.minecraft.util.math.shapes.*;
 import net.minecraft.world.IBlockReader;
 
 public class BlockDilithiumCrystal extends BlockBase {
-<<<<<<< Updated upstream
-=======
-
     public static final VoxelShape getVoxelShape() {
         VoxelShape voxelShape = VoxelShapes.create(0.31, 0.06, 0, 0.56, 0.75, 0.25);
         voxelShape = VoxelShapes.combineAndSimplify(voxelShape, VoxelShapes.create(0.68, 0, 0.35, 0.93, 0.68, 0.62), IBooleanFunction.OR);
@@ -18,7 +15,6 @@ public class BlockDilithiumCrystal extends BlockBase {
         return voxelShape;
     };
 
->>>>>>> Stashed changes
     public BlockDilithiumCrystal(Properties properties) {
         super(properties);
     }
