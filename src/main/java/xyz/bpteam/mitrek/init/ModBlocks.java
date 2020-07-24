@@ -31,7 +31,9 @@ public class ModBlocks {
     public static final Block MAGNESITE_ORE = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "magnesite_ore").setGroup(ModItemGroups.MITREK_BLOCKS);
     public static final Block VICTURIUM_ORE = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "victurium_ore").setGroup(ModItemGroups.MITREK_BLOCKS);
     public static final Block TRITANIUM_ORE = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "tritanium_ore").setGroup(ModItemGroups.MITREK_BLOCKS);
+    public static final Block COPPER_ORE = registerBlock(new BlockBase(Block.Properties.create(Material.IRON)), "copper_ore").setGroup(ModItemGroups.MITREK_BLOCKS);
     public static final Block DILITHIUM_CRYSTAL = registerBlock(new BlockDilithiumBlock(Block.Properties.create(Material.GLASS).lightValue(10).harvestTool(ToolType.PICKAXE).hardnessAndResistance(2.5f).sound(SoundType.GLASS).harvestLevel(1)), "dilithium_crystal").setGroup(ModItemGroups.MITREK_BLOCKS);
+
 
 
     public static BlockBase registerBlock(BlockBase base, String name) {
