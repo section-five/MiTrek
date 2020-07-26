@@ -15,12 +15,6 @@ import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
-<<<<<<< Updated upstream
-import net.minecraftforge.eventbus.api.Event;
-=======
-import xyz.bpteam.mitrek.world.generation.ShipChunkGeneration;
-import xyz.bpteam.mitrek.world.generation.ShipWorldGeneration;
->>>>>>> Stashed changes
 
 import javax.annotation.Nullable;
 
@@ -32,7 +26,7 @@ public class ShipDimension extends Dimension {
 
     @Override
     public ChunkGenerator<?> createChunkGenerator() {
-        return
+        return null;
     }
 
     @Nullable
