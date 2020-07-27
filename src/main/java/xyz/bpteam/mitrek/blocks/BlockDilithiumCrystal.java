@@ -11,7 +11,7 @@ public class BlockDilithiumCrystal extends BlockBase {
         super(properties);
     }
 
-    public static final VoxelShape SHAPE = BlockBase.makeCuboidShape(16.0D, 14.0D, 16.0D, 2.0D, 0.0D, 2.0D);
+    public static final VoxelShape SHAPE = BlockBase.makeCuboidShape(5.0D, 0.0D, 5.0D, 12.0D, 7.0D, 11.0D);
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
         return SHAPE;
