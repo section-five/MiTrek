@@ -2,15 +2,14 @@ package xyz.bpteam.mitrek.world.generation;
 
 import net.minecraft.world.IWorld;
 import net.minecraft.world.biome.provider.BiomeProvider;
-import net.minecraft.world.chunk.EmptyChunk;
 import net.minecraft.world.chunk.IChunk;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.gen.GenerationSettings;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.gen.WorldGenRegion;
 
-public class ShipWorldGeneration extends ShipChunkGeneration {
-    public ShipWorldGeneration(IWorld worldIn, BiomeProvider biomeProviderIn, GenerationSettings generationSettingsIn) {
+public class ShipChunkGeneration<T extends GenerationSettings> extends ChunkGenerator {
+    public ShipChunkGeneration(IWorld worldIn, BiomeProvider biomeProviderIn, GenerationSettings generationSettingsIn) {
         super(worldIn, biomeProviderIn, generationSettingsIn);
     }
 
