@@ -2,13 +2,10 @@
 
 import net.minecraft.world.World;
 import net.minecraft.world.dimension.Dimension;
-<<<<<<< Updated upstream
 import net.minecraftforge.common.extensions.IForgeDimension;
-=======
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraftforge.common.ModDimension;
 import xyz.bpteam.mitrek.world.dim.ShipDimension;
->>>>>>> Stashed changes
 
 import java.util.ArrayList;
 import java.util.List;

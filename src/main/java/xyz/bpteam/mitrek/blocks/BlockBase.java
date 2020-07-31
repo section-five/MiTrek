@@ -13,7 +13,7 @@ public class BlockBase extends Block {
     }
 
     public Block setGroup(ItemGroup... groups) {
-        if(mItemBlock != null) mItemBlock.setGroup(groups);
+        if (mItemBlock != null) mItemBlock.setGroup(groups);
         return this;
     }
 

@@ -1,4 +1,4 @@
-# MiTrek ![](https://img.shields.io/badge/Minecraft-1.15.2-blue.svg) ![](https://img.shields.io/badge/Latest%20Version-0.1-blue.svg) ![](https://img.shields.io/badge/Mod%20Status-Incomplete-red.svg) ![Discord](https://img.shields.io/discord/538796875311218721) ![Gradle Build](https://github.com/UKMinecrafted/MiTrek/workflows/Gradle%20Build/badge.svg?branch=1.15.2)
+# MiTrek ![](https://img.shields.io/badge/Minecraft-1.15.2-blue.svg) ![](https://img.shields.io/badge/Latest%20Version-1.0.0-blue.svg) ![](https://img.shields.io/badge/Mod%20Status-Incomplete-red.svg) ![Discord](https://img.shields.io/discord/538796875311218721) ![Gradle Build](https://github.com/UKMinecrafted/MiTrek/workflows/Gradle%20Build/badge.svg?branch=1.15.2)
 
 Adds Star Trek to Minecraft.
 
@@ -24,13 +24,13 @@ and click play and enjoy
 ## Authors
 
 * **[UKMinecrafted](https://GitHub.com/UKMinecrafted)** - *Mod Creator, Coder and Modeler*
-* **[Josia50](https://GitHub.com/Josia50)** - *BPTeam, Coder*
-* **[Ben1Ben1](https://GitHub.com/Ben1Ben1)** - *BPTeam, Modeler*
 * **[Berenvonbaggins](https://github.com/berenvonbaggins)** - *BPTeam, Modeler*
+* **[Josia50](https://GitHub.com/Josia50)** - *Retired Developer*
 
 ## Contributors
 
 * **AXL2/Exxl2**
+* **CountJJofSG**
 
 ## License
 
