@@ -40,7 +40,7 @@ public class BlockShipConstructor extends BlockBase {
     }
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, OPEN);
     }
 
     public BlockState getStateForPlacement(BlockItemUseContext context) {
