@@ -2,6 +2,7 @@ package xyz.bpteam.mitrek.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+
 import net.minecraft.block.DirectionalBlock;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.item.BlockItemUseContext;
@@ -22,7 +23,11 @@ public class BlockShipConstructor extends BlockBase {
     public BlockShipConstructor(Block.Properties builder) {
 
         super(builder);
-        this.setDefaultState(this.getStateContainer().getBaseState().with(FACING, Direction.NORTH));
+    }
+
+
+    public BlockShipConstructor(Block.Properties builder) {
+        super(builder);
     }
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
@@ -33,13 +38,6 @@ public class BlockShipConstructor extends BlockBase {
         return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
     }
 
-    public BlockState rotate(BlockState state, Rotation rot) {
-        return state.with(FACING, rot.rotate(state.get(FACING)));
-    }
-
-    public BlockState mirror(BlockState state, Mirror mirrorIn) {
-        return state.rotate(mirrorIn.toRotation(state.get(FACING)));
-    }
 
     int state = 0;
 

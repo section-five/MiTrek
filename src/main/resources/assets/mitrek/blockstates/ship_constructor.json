@@ -1,7 +1,9 @@
 {
   "variants": {
-    "": {
-      "model": "mitrek:block/ship_constructor"
-    }
+    "facing=north": { "model": "mitrek:block/ship_constructor"},
+    "facing=south": { "model": "mitrek:block/ship_constructor", "y": 180 },
+    "facing=west": { "model": "mitrek:block/ship_constructor", "y": 270 },
+    "facing=east": { "model": "mitrek:block/ship_constructor", "y": 90 }
+  }
   }
 }
