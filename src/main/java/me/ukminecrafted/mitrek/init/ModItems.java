@@ -16,6 +16,10 @@ public class ModItems {
     public static final Item VICTURIUM_INGOT = registerItem(new ItemBase(), "victurium_ingot").setGroup(ModItemGroups.MITREK_ITEMS);
     public static final Item TRITANIUM_INGOT = registerItem(new ItemBase(), "tritanium_ingot").setGroup(ModItemGroups.MITREK_ITEMS);
     public static final Item COPPER_INGOT = registerItem(new ItemBase(), "copper_ingot").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item DILITHIUM_CRYSTAL_urf = registerItem(new ItemBase(), "dilithum_crystal_urf").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item DILITHIUM_CRYSTAL_rf = registerItem(new ItemBase(), "dilithum_crystal_rf").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item DILITHIUM_CRYSTAL_aurf = registerItem(new ItemBase(), "dilithum_crystal_aurf").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item DILITHIUM_CRYSTAL_arf = registerItem(new ItemBase(), "dilithum_crystal_arf").setGroup(ModItemGroups.MITREK_ITEMS);
 
     //ship components
     public static final Item WARP_CORE = registerItem(new ItemBase(), "warp_core").setGroup(ModItemGroups.MITREK_ITEMS);
