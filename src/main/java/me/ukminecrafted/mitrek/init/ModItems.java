@@ -9,6 +9,12 @@ import java.util.List;
 public class ModItems {
     public static final List<Item> ITEMS = new ArrayList<>();
 
+    //isolinear chips
+    public static final Item ISOLINEAR_BASE = registerItem(new ItemBase(), "isolinear_base").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item GREEN_ISOLINEAR_CHIP = registerItem(new ItemBase(), "green_isolinear_chip").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item BLUE_ISOLINEAR_CHIP = registerItem(new ItemBase(), "blue_isolinear_chip").setGroup(ModItemGroups.MITREK_ITEMS);
+    public static final Item YELLOW_ISOLINEAR_CHIP = registerItem(new ItemBase(), "yellow_isolinear_chip").setGroup(ModItemGroups.MITREK_ITEMS);
+
     //resources
     public static final Item DURANIUM_INGOT = registerItem(new ItemBase(), "duranium_ingot").setGroup(ModItemGroups.MITREK_ITEMS);
     public static final Item MAGNESITE_CRYSTAL = registerItem(new ItemBase(), "magnesite_crystal").setGroup(ModItemGroups.MITREK_ITEMS);
