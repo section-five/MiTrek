@@ -24,7 +24,7 @@ and click play and enjoy
 ## Authors
 
 * **[UKMinecrafted](https://GitHub.com/UKMinecrafted)** - *Mod Creator, Coder and Modeler*
-* **[Berenvonbaggins](https://github.com/berenvonbaggins)** - *BPTeam, Modeler*
+* **[Berenvonbaggins](https://github.com/berenvonbaggins)** - *Dev in Training, Modeler*
 * **[Josia50](https://GitHub.com/Josia50)** - *Retired Developer*
 
 ## Contributors
@@ -38,5 +38,5 @@ This project is licensed under the GNU Public Licence 3.0  License - see the [LI
 
 ## Contact
 You can contact us at the following below
-* support@bpteam.xyz
+* sectionfiveteam@gmail.com
 * and on our [Discord](https://discord.gg/Zawfp6K), @UKMinecrafted
