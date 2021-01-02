@@ -1,0 +1,26 @@
+modLoader="javafml" #mandatory
+loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+issueTrackerURL="https://github.com/section-five/MiTrek/issues" #optional
+[[mods]] #mandatory
+modId="mitrek" #mandatory
+version="0.1-alpha" #mandatory
+displayName="MiTrek" #mandatory
+updateJSONURL="https://raw.githubusercontent.com/section-five/MiTrek/1.15.2/update.json" #optional
+displayURL="http://section-five.github.io/" #optional
+logoFile="logo.png" #optional
+credits="Section Five" #optional
+authors="§6UKMinecrafted §2Josia50 §3Berenvonbaggins" #optional
+description='''Adds gear from the Science Fiction TV Show Star Trek'''
+
+[[dependencies.mitrek]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[31,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.mitrek]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"

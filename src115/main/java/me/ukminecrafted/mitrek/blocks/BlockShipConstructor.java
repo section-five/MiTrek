@@ -24,7 +24,7 @@ public class BlockShipConstructor extends BlockBase {
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
-    public BlockShipConstructor(Properties builder) {
+    public BlockShipConstructor(Block.Properties builder) {
         super(builder);
         this.setDefaultState(this.getStateContainer().getBaseState().with(FACING, Direction.NORTH).with(OPEN ,Boolean.valueOf(false)));
     }

@@ -26,7 +26,7 @@ public class BlockDilithiumCrystal extends BlockBase {
         return true;
     }
 
-    public OffsetType getOffsetType() {
-        return OffsetType.XZ;
+    public Block.OffsetType getOffsetType() {
+        return Block.OffsetType.XZ;
     }
 }

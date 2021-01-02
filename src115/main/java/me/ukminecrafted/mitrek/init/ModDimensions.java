@@ -1,4 +1,4 @@
-package me.ukminecrafted.mitrek.init;/*package xyz.bpteam.mitrek.init;
+/*package xyz.bpteam.mitrek.init;
 
 import net.minecraft.world.World;
 import net.minecraft.world.dimension.Dimension;

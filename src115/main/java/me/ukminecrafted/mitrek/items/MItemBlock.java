@@ -13,7 +13,7 @@ public class MItemBlock extends BlockItem {
     public List<ItemGroup> groups;
 
     public MItemBlock(Block blockIn) {
-        super(blockIn, new Properties());
+        super(blockIn, new Item.Properties());
     }
 
     public Item setGroup(ItemGroup... groups) {

@@ -1,4 +1,4 @@
-package me.ukminecrafted.mitrek.ship;/*package xyz.bpteam.mitrek.ship;
+/*package xyz.bpteam.mitrek.ship;
 
 import net.minecraft.world.storage.IPlayerFileData;
 import xyz.bpteam.mitrek.MiTrek;
