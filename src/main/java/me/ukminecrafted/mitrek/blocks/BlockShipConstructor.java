@@ -29,11 +29,11 @@ public class BlockShipConstructor extends BlockBase {
         this.setDefaultState(this.getStateContainer().getBaseState().with(FACING, Direction.NORTH).with(OPEN ,Boolean.valueOf(false)));
     }
 
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+    /*public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
     state = state.cycle(OPEN);
     worldIn.setBlockState(pos, state);
     return ActionResultType.SUCCESS;
-    }
+    }*/
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(FACING, OPEN);

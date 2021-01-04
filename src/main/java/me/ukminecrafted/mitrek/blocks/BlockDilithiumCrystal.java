@@ -1,4 +1,4 @@
-package me.ukminecrafted.mitrek.blocks;
+/*package me.ukminecrafted.mitrek.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -29,4 +29,4 @@ public class BlockDilithiumCrystal extends BlockBase {
     public OffsetType getOffsetType() {
         return OffsetType.XZ;
     }
-}
+}*/
