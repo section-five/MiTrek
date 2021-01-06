@@ -5,6 +5,8 @@ import com.google.gson.GsonBuilder;
 import me.ukminecrafted.mitrek.world.generation.OreGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.OreFeature;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -35,7 +37,7 @@ public class MiTrek {
 
     @SubscribeEvent
     public void commonSetup(FMLCommonSetupEvent event) {
-        OreGeneration.init();
+
 
     }
 
