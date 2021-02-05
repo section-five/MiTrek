@@ -10,9 +10,7 @@ import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
@@ -26,7 +24,7 @@ public class BlockShipConstructor extends BlockBase {
 
     public BlockShipConstructor(Properties builder) {
         super(builder);
-        this.setDefaultState(this.getStateContainer().getBaseState().with(FACING, Direction.NORTH).with(OPEN ,Boolean.valueOf(false)));
+        this.setDefaultState(this.getStateContainer().getBaseState().with(FACING, Direction.NORTH).with(OPEN, Boolean.FALSE));
     }
 
     /*public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
@@ -34,6 +32,20 @@ public class BlockShipConstructor extends BlockBase {
     worldIn.setBlockState(pos, state);
     return ActionResultType.SUCCESS;
     }*/
+
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        if (player.isAllowEdit()) {
+            if (worldIn.isRemote) {
+                return ActionResultType.SUCCESS;
+            } else {
+                BlockState blockstate = state.func_235896_a_(OPEN);
+                worldIn.setBlockState(pos, blockstate, 4);
+                return ActionResultType.CONSUME;
+            }
+        } else {
+            return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
+        }
+    }
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(FACING, OPEN);
