@@ -1,4 +1,4 @@
-package me.ukminecrafted.mitrek.world.generation;
+/*package me.ukminecrafted.mitrek.world.generation;
 
 import me.ukminecrafted.mitrek.MiTrek;
 import net.minecraft.block.BlockState;
@@ -37,7 +37,7 @@ public class OreGeneration {
         Registry<ConfiguredFeature<?, ?>> registry = WorldGenRegistries.CONFIGURED_FEATURE;
         Registry.register(registry, new ResourceLocation(MiTrek.MODID, registryName), configuredFeature);
 
-    }
+    }}
 
 
     /*public static void init() {
