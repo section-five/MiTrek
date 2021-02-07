@@ -3,12 +3,14 @@ package me.ukminecrafted.mitrek;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 //import me.ukminecrafted.mitrek.world.generation.OreGeneration;
+import me.ukminecrafted.mitrek.world.Features;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeature;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -31,6 +33,7 @@ public class MiTrek {
         final IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         eventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, Features::generateOres);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
