@@ -1,6 +1,8 @@
-# MiTrek ![](https://img.shields.io/badge/Minecraft-1.15.2-blue.svg) ![](https://img.shields.io/badge/Latest%20Version-1.0.0-blue.svg) ![](https://img.shields.io/badge/Mod%20Status-Incomplete-red.svg) ![Discord](https://img.shields.io/discord/538796875311218721) ![Gradle Build](https://github.com/UKMinecrafted/MiTrek/workflows/Gradle%20Build/badge.svg?branch=1.15.2)
+# MiTrek ![](https://img.shields.io/badge/Minecraft-1.15.2-blue.svg) ![](https://img.shields.io/badge/Latest%20Version-1.0.0-blue.svg) ![](https://img.shields.io/badge/Mod%20Status-Abandoned-black.svg) ![Discord](https://img.shields.io/discord/538796875311218721) ![Gradle Build](https://github.com/UKMinecrafted/MiTrek/workflows/Gradle%20Build/badge.svg?branch=1.15.2)
 
 Adds Star Trek to Minecraft.
+
+## This project is abandoned.
 
 ## Getting Started
 
